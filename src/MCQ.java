@@ -15,7 +15,9 @@ class MCQ extends Question {
         else return false;
     }
 
+
     public static void main(String[] args) {
         MCQ m1 = new MCQ();
+        
     }
 }
