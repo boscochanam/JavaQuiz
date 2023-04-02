@@ -1,43 +1,42 @@
 import java.util.Scanner;
+
 public class DescType extends Question {
 
-    private String correctAns; 
+    private String correctAns;
     private String userAns;
-    
-    DescType(){
+
+    DescType() {
         super();
         String q = "Empty Question";
         setQuestion(q);
         System.out.println(getQuestion());
         correctAns = "hello";
-
     }
-    String getAnswer()
-    {
-        System.out.print("Enter your answer: ");
-        Scanner sc = new Scanner(System.in);
-        userAns = sc.next();
-        sc.close();
-        return userAns;
+
+    public DescType(String que, String ans) {
+        correctAns = ans;
+        setQuestion(que);
+    }
+
+    String getAnswer() {
+        return correctAns;
     }
 
     boolean isCorrect(String userOption) {
-        if (userOption.equals(correctAns)) return true;
-        else return false;
+        if (userOption.equals(correctAns))
+            return true;
+        else
+            return false;
     }
 
-    public static void main(String [] args)
-    {
+    public static void main(String[] args) {
         String ans;
-        
+
         DescType d1 = new DescType();
         ans = d1.getAnswer();
-        if(d1.isCorrect(ans) == true)
-        {
+        if (d1.isCorrect(ans) == true) {
             System.out.println("Correct Answer!");
-        } 
-        else
-        {
+        } else {
             System.out.println("Wrong Answer!");
         }
     }

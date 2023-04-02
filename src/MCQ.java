@@ -15,6 +15,10 @@ class MCQ extends Question {
         else return false;
     }
 
+    @Override
+    String getAnswer() {
+        return null;
+    }
 
     public static void main(String[] args) {
         MCQ m1 = new MCQ();
