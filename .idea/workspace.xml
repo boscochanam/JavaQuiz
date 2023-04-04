@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="added">
+      <change afterPath="$PROJECT_DIR$/src/StartFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DescFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DescFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MCQFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MCQFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.TestUI">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.StartFrame">
     <configuration name="DescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DescFrame" />
       <module name="JavaQuiz" />
@@ -47,15 +56,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MCQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MCQ" />
+    <configuration name="MCQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MCQFrame" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MCQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MCQFrame" />
+    <configuration name="StartFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StartFrame" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,11 +86,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StartFrame" />
         <item itemvalue="Application.TestUI" />
         <item itemvalue="Application.DescFrame" />
         <item itemvalue="Application.MCQFrame" />
         <item itemvalue="Application.UI" />
-        <item itemvalue="Application.MCQ" />
       </list>
     </recent_temporary>
   </component>
@@ -125,5 +134,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added" />
     <option name="LAST_COMMIT_MESSAGE" value="added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
