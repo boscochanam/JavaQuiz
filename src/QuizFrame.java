@@ -42,6 +42,9 @@ public class QuizFrame extends JFrame {
         pack();
     }
 
+    public QuizFrame(JPanel questionPanel) {
+    }
+
     public String getQuestionText() {
         return questionLabel.getText();
     }

@@ -52,4 +52,8 @@ public class MCQFrame extends JFrame {
         setSize(500, 500);
         setVisible(true);
     }
+
+    public static void main(String[] args) {
+        MCQFrame frame = new MCQFrame();
+    }
 }
