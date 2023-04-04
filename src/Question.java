@@ -1,11 +1,12 @@
+import java.util.*;
+
 public abstract class Question {
     private int qNo;
     private float marks;
     private int difficulty;
     private String qType;
     private String questionDesc;
-    abstract boolean isCorrect(String ans);
-
+    private String correctAns;
     static int currentQNo = 0;
 
     // Question Description Getter / Setter Functions
@@ -26,7 +27,7 @@ public abstract class Question {
 
     // Difficulty Getter / Setter
     public void setDifficulty(int diff){
-       difficulty = diff;
+        difficulty = diff;
     }
     public int getDifficulty(){
         return difficulty;
@@ -43,6 +44,17 @@ public abstract class Question {
         difficulty = 0;
         questionDesc = "Empty Question";
         qType = "None";
+        correctAns = "None";
     }
-}
 
+    public void setCorrectAns(String ans) {
+        correctAns = ans;
+    }
+
+    public String getCorrectAns() {
+        return correctAns;
+    }
+
+    abstract String getAnswer();
+    abstract boolean isCorrect(String ans);
+}
