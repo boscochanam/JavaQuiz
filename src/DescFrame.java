@@ -51,8 +51,11 @@ public class DescFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        new DescFrame(new TestUI());
+        // Instantiate the frame and show it
+        DescFrame frame = new DescFrame(new TestUI());
+        frame.setVisible(true);
     }
+
 
 
 }

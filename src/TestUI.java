@@ -1,34 +1,46 @@
 import javax.swing.*;
 
 public class TestUI {
+
+    private JFrame currentFrame;
     private JFrame[] frames;
     private int currentFrameIndex;
 
-    public TestUI() {
-        // Create the quiz frames
-        frames = new JFrame[]{new MCQFrame(this), new DescFrame(this)};
+    private JFrame startFrame;
 
-        // Show the first frame
-        currentFrameIndex = 0;
-        frames[currentFrameIndex].setVisible(true);
+    public TestUI() {
+        // Initialize the frames
+        frames = new JFrame[]{new MCQFrame(this), new DescFrame(this)};
+        currentFrameIndex = -1;
+
+        // Show the StartFrame
+        startFrame = new StartFrame(this);
     }
 
     public void showNextFrame() {
-        // Close the current frame
-        frames[currentFrameIndex].dispose();
+        // Close the current frame if it exists
+        if (currentFrame != null) {
+            currentFrame.dispose();
+        }
 
         // Move to the next frame
         currentFrameIndex++;
-        if (currentFrameIndex < frames.length) {
-            // Show the next frame
-            frames[currentFrameIndex].setVisible(true);
-        } else {
-            // The quiz is complete, exit the program
+
+        // Check if there are no more frames to show
+        if (currentFrameIndex >= frames.length) {
+            // Show a message dialog indicating the end of the quiz
+            JOptionPane.showMessageDialog(null, "End of Quiz!");
+            // Exit the program
             System.exit(0);
         }
+
+        // Show the next frame
+        currentFrame = frames[currentFrameIndex];
+        currentFrame.setVisible(true);
     }
 
     public static void main(String[] args) {
-        new TestUI();
+        // Create a new TestUI instance
+        TestUI testUI = new TestUI();
     }
 }

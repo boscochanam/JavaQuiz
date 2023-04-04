@@ -14,7 +14,7 @@ public class StartFrame extends JFrame {
         JPanel panel = new JPanel(new BorderLayout());
 
         // Load the Java logo image
-        ImageIcon icon = new ImageIcon("C:\\Users\\Anirudh Rautela\\Desktop\\Java_programming_language_logo.svg.png");
+        ImageIcon icon = new ImageIcon("F:\\JavaQuiz\\JavaQuiz\\src\\java_logo.png");
         // Add the Java logo to the center of the JPanel
         JLabel logoLabel = new JLabel(icon);
         panel.add(logoLabel, BorderLayout.CENTER);
@@ -33,6 +33,25 @@ public class StartFrame extends JFrame {
         // Set the JFrame to be visible
         setVisible(true);
 
+        // Add an action listener to the Start button
+        startButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Close the StartFrame and show the next frame
+                dispose();
+                new TestUI();
+            }
+        });
+
+        // Add an action listener to the LeaderBoard button
+        leaderBoardButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Display a message dialog with the LeaderBoard information
+                JOptionPane.showMessageDialog(null, "LeaderBoard is coming soon!", "LeaderBoard", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+
         // Add a component listener to the panel to listen for size changes
         panel.addComponentListener(new ComponentAdapter() {
             @Override
@@ -46,6 +65,9 @@ public class StartFrame extends JFrame {
                 logoLabel.setIcon(scaledIcon);
             }
         });
+    }
+
+    public StartFrame(TestUI testUI) {
     }
 
     public static void main(String[] args) {
