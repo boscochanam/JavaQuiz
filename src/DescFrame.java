@@ -3,8 +3,12 @@ import java.awt.*;
 
 public class DescFrame extends JFrame {
 
-    public DescFrame() {
+    private TestUI ui;
+
+    public DescFrame(TestUI ui) {
         super("Java Quiz");
+
+        this.ui = ui;
 
         // Set up the question panel
         JPanel questionPanel = new JPanel();
@@ -33,6 +37,9 @@ public class DescFrame extends JFrame {
             } else {
                 JOptionPane.showMessageDialog(this, "Incorrect!");
             }
+            // Close the current frame and open the next one
+            ui.showNextFrame();
+            dispose();
         });
         questionPanel.add(submitButton, BorderLayout.SOUTH);
 
@@ -44,6 +51,8 @@ public class DescFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        DescFrame frame = new DescFrame();
+        new DescFrame(new TestUI());
     }
+
+
 }

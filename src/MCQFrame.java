@@ -1,10 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MCQFrame extends JFrame {
+    private TestUI ui;
 
-    public MCQFrame() {
+    public MCQFrame(TestUI ui) {
         super("Java Quiz");
+
+        this.ui = ui;
 
         // Set up the question panel
         JPanel questionPanel = new JPanel();
@@ -43,6 +48,9 @@ public class MCQFrame extends JFrame {
             } else {
                 JOptionPane.showMessageDialog(this, "Incorrect!");
             }
+            // Close this frame and show the next one
+            ui.showNextFrame();
+            dispose();
         });
         questionPanel.add(submitButton, BorderLayout.SOUTH);
 
@@ -50,10 +58,6 @@ public class MCQFrame extends JFrame {
         add(questionPanel);
 
         setSize(500, 500);
-        setVisible(true);
     }
 
-    public static void main(String[] args) {
-        MCQFrame frame = new MCQFrame();
-    }
 }
