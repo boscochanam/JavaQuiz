@@ -6,7 +6,7 @@ public class TestUI {
 
     public TestUI() {
         // Create the quiz frames
-        frames = new JFrame[]{new MCQFrame(this), new DescFrame(this)};
+        frames = new JFrame[]{new StartFrame(this), new MCQFrame(this), new DescFrame(this)};
 
         // Show the first frame
         currentFrameIndex = 0;

@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class StartFrame extends JFrame {
 
-    public StartFrame() {
+    public StartFrame(TestUI ui) {
         // Set the title and size of the JFrame
         setTitle("Java Quiz Start Menu");
         setSize(400, 400);
@@ -49,6 +49,6 @@ public class StartFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        StartFrame startFrame = new StartFrame();
+        new StartFrame(new TestUI());
     }
 }
