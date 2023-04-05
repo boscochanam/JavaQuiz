@@ -1,3 +1,5 @@
+package ui_package;
+
 import javax.swing.*;
 
 public class TestUI {
@@ -40,7 +42,7 @@ public class TestUI {
     }
 
     public static void main(String[] args) {
-        // Create a new TestUI instance
+        // Create a new ui_package.TestUI instance
         TestUI testUI = new TestUI();
     }
 }

@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="added">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="added nothing">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DescFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DescFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StartFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DescFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/DescFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DescType.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/IntType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MCQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/MCQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MCQFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/QuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuizFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/QuizFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/StartFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/TestUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +51,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JAVA\JavaQuiz\src\question_package" />
+      <recent name="C:\JAVA\JavaQuiz\src\ui_package" />
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StartFrame">
+  <component name="RunManager">
     <configuration name="DescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DescFrame" />
+      <option name="MAIN_CLASS_NAME" value="ui_package.DescFrame" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -68,7 +79,7 @@
       </method>
     </configuration>
     <configuration name="TestUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestUI" />
+      <option name="MAIN_CLASS_NAME" value="ui_package.TestUI" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />

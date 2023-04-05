@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package question_package;
 
 public class DescType extends Question {
 
@@ -18,11 +18,11 @@ public class DescType extends Question {
         setQuestion(que);
     }
 
-    String getAnswer() {
+    protected String getAnswer() {
         return correctAns;
     }
 
-    boolean isCorrect(String userOption) {
+    public boolean isCorrect(String userOption) {
         if (userOption.equals(correctAns))
             return true;
         else

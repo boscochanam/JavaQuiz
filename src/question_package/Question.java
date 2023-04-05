@@ -1,3 +1,5 @@
+package question_package;
+
 import java.util.*;
 
 public abstract class Question {
@@ -55,6 +57,6 @@ public abstract class Question {
         return correctAns;
     }
 
-    abstract String getAnswer();
-    abstract boolean isCorrect(String ans);
+    protected abstract String getAnswer();
+    protected abstract boolean isCorrect(String ans);
 }

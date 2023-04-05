@@ -1,3 +1,5 @@
+package question_package;
+
 class MCQ extends Question {
 
     private String correctOption;
@@ -10,13 +12,13 @@ class MCQ extends Question {
 
     }
     @Override
-    boolean isCorrect(String userOption) {
+    public boolean isCorrect(String userOption) {
         if (userOption.equals(correctOption)) return true;
         else return false;
     }
 
     @Override
-    String getAnswer() {
+    public String getAnswer() {
         return null;
     }
 
