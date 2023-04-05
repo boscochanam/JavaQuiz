@@ -3,61 +3,76 @@ package ui_package;
 import javax.swing.*;
 import java.awt.*;
 
-public class DescFrame extends JFrame {
+public class DescFrame extends QuestionFrame {
 
-    private TestUI ui;
+    private JLabel questionLabel;
+    private JTextField answerField;
+    private JButton submitButton;
 
-    public DescFrame(TestUI ui) {
-        super("Java Quiz");
+    private int questionNumber;
 
-        this.ui = ui;
+    public DescFrame() {
+        super();
 
-        // Set up the question panel
-        JPanel questionPanel = new JPanel();
-        questionPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-        questionPanel.setLayout(new BorderLayout());
+        questionNumber = 0;
 
-        // Set up the question label
-        JLabel questionLabel = new JLabel("What is the capital of France?");
-        questionLabel.setFont(new Font("Arial", Font.PLAIN, 20));
-        questionPanel.add(questionLabel, BorderLayout.NORTH);
+        // Initialize GUI components
+        questionLabel = new JLabel();
+        answerField = new JTextField(20);
+        submitButton = new JButton("Submit");
 
-        // Set up the answer text box
-        JPanel answerPanel = new JPanel();
-        answerPanel.setLayout(new BorderLayout());
-        JTextField answerTextField = new JTextField();
-        answerPanel.add(answerTextField, BorderLayout.CENTER);
-        questionPanel.add(answerPanel, BorderLayout.CENTER);
+        // Layout components
+        JPanel content = new JPanel();
+        content.setLayout(new GridLayout(3, 1, 10, 10)); // 3 rows, 1 column
+        content.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        content.add(questionLabel);
+        content.add(answerField);
+        content.add(submitButton);
 
-        // Set up the submit button
-        JButton submitButton = new JButton("Submit");
-        submitButton.addActionListener(e -> {
-            String userAns = answerTextField.getText();
-            // Check if the correct answer is entered
-            if (userAns.equalsIgnoreCase("Paris")) {
-                JOptionPane.showMessageDialog(this, "Correct!");
-            } else {
-                JOptionPane.showMessageDialog(this, "Incorrect!");
-            }
-            // Close the current frame and open the next one
-            ui.showNextFrame();
-            dispose();
-        });
-        questionPanel.add(submitButton, BorderLayout.SOUTH);
+        // Add content to frame
+        getContentPane().add(content);
 
-        // Add the question panel to the frame
-        add(questionPanel);
+        // Set behavior
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
 
-        setSize(500, 500);
-        setVisible(true);
+        // Set preferred size
+        Dimension preferredSize = new Dimension(500, 300);
+        content.setPreferredSize(preferredSize);
+        setPreferredSize(preferredSize);
+        pack();
     }
 
-    public static void main(String[] args) {
-        // Instantiate the frame and show it
-        DescFrame frame = new DescFrame(new TestUI());
-        frame.setVisible(true);
+    public DescFrame(JPanel questionPanel) {
     }
 
+    public String getQuestionText() {
+        return questionLabel.getText();
+    }
 
+    public int getQuestionNumber() {
+        return questionNumber;
+    }
 
+    public void setQuestion(String question) {
+        questionNumber++;
+        questionLabel.setText("Question " + questionNumber + ": " + question);
+    }
+
+    public String getUserAnswer() {
+        return answerField.getText();
+    }
+
+    public void clearAnswer() {
+        answerField.setText("");
+    }
+
+    public JButton getSubmit() {
+        return submitButton;
+    }
+
+    public void setQuestionNumber(int i) {
+        questionNumber = i;
+    }
 }

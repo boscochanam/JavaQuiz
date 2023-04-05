@@ -18,7 +18,7 @@ public class DescType extends Question {
         setQuestion(que);
     }
 
-    protected String getAnswer() {
+    public String getAnswer() {
         return correctAns;
     }
 

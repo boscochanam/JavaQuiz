@@ -3,7 +3,7 @@ package ui_package;
 import javax.swing.*;
 import java.awt.*;
 
-public class QuizFrame extends JFrame {
+public class QuestionFrame extends JFrame {
 
     private JLabel questionLabel;
     private JTextField answerField;
@@ -11,7 +11,7 @@ public class QuizFrame extends JFrame {
 
     private int questionNumber;
 
-    public QuizFrame() {
+    public QuestionFrame() {
         super("Quiz");
 
         questionNumber = 0;
@@ -44,7 +44,7 @@ public class QuizFrame extends JFrame {
         pack();
     }
 
-    public QuizFrame(JPanel questionPanel) {
+    public QuestionFrame(JPanel questionPanel) {
     }
 
     public String getQuestionText() {
@@ -56,8 +56,10 @@ public class QuizFrame extends JFrame {
     }
 
     public void setQuestion(String question) {
+        System.out.println(questionLabel + " old ");
         questionNumber++;
         questionLabel.setText("Question " + questionNumber + ": " + question);
+        System.out.println(questionLabel + " new ");
     }
 
     public String getUserAnswer() {
@@ -74,5 +76,11 @@ public class QuizFrame extends JFrame {
 
     public void setQuestionNumber(int i) {
         questionNumber = i;
+    }
+
+    public static void main(String[] args) {
+        //QuestionFrame q1 = new QuestionFrame();
+        //q1.setQuestion("Hello");
+        //q1.setVisible(true);
     }
 }

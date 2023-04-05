@@ -2,64 +2,99 @@ package ui_package;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class MCQFrame extends JFrame {
-    private TestUI ui;
+public class MCQFrame extends QuestionFrame {
 
-    public MCQFrame(TestUI ui) {
-        super("Java Quiz");
+    private JLabel questionLabel;
+    private JButton optionAButton;
+    private JButton optionBButton;
+    private JButton optionCButton;
+    private JButton optionDButton;
 
-        this.ui = ui;
+    private int questionNumber;
 
-        // Set up the question panel
-        JPanel questionPanel = new JPanel();
-        questionPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-        questionPanel.setLayout(new BorderLayout());
+    public MCQFrame() {
+        super();
 
-        // Set up the question label
-        JLabel questionLabel = new JLabel("What is the capital of France?");
-        questionLabel.setFont(new Font("Arial", Font.PLAIN, 20));
-        questionPanel.add(questionLabel, BorderLayout.NORTH);
+        questionNumber = 0;
 
-        // Set up the answer choices
-        JPanel choicesPanel = new JPanel();
-        choicesPanel.setLayout(new GridLayout(4, 1));
-        JRadioButton choice1 = new JRadioButton("New York");
-        JRadioButton choice2 = new JRadioButton("London");
-        JRadioButton choice3 = new JRadioButton("Paris");
-        JRadioButton choice4 = new JRadioButton("Tokyo");
-        ButtonGroup choicesGroup = new ButtonGroup();
-        choicesGroup.add(choice1);
-        choicesGroup.add(choice2);
-        choicesGroup.add(choice3);
-        choicesGroup.add(choice4);
-        choicesPanel.add(choice1);
-        choicesPanel.add(choice2);
-        choicesPanel.add(choice3);
-        choicesPanel.add(choice4);
-        questionPanel.add(choicesPanel, BorderLayout.CENTER);
+        // Initialize GUI components
+        questionLabel = new JLabel();
+        optionAButton = new JButton();
+        optionBButton = new JButton();
+        optionCButton = new JButton();
+        optionDButton = new JButton();
 
-        // Set up the submit button
-        JButton submitButton = new JButton("Submit");
-        submitButton.addActionListener(e -> {
-            // Check if the correct answer is selected
-            if (choice3.isSelected()) {
-                JOptionPane.showMessageDialog(this, "Correct!");
-            } else {
-                JOptionPane.showMessageDialog(this, "Incorrect!");
-            }
-            // Close this frame and show the next one
-            ui.showNextFrame();
-            dispose();
-        });
-        questionPanel.add(submitButton, BorderLayout.SOUTH);
+        // Layout components
+        JPanel content = new JPanel();
+        content.setLayout(new GridLayout(5, 1, 10, 10)); // 5 rows, 1 column
+        content.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        content.add(questionLabel);
+        content.add(optionAButton);
+        content.add(optionBButton);
+        content.add(optionCButton);
+        content.add(optionDButton);
 
-        // Add the question panel to the frame
-        add(questionPanel);
+        // Add content to frame
+        getContentPane().add(content);
 
-        setSize(500, 500);
+        // Set behavior
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
+
+        // Set preferred size
+        Dimension preferredSize = new Dimension(500, 300);
+        content.setPreferredSize(preferredSize);
+        setPreferredSize(preferredSize);
+        pack();
     }
 
+    public MCQFrame(JPanel questionPanel) {
+    }
+
+    public String getQuestionText() {
+        return questionLabel.getText();
+    }
+
+    public int getQuestionNumber() {
+        return questionNumber;
+    }
+
+    public void setQuestion(String question, String optionA, String optionB, String optionC, String optionD) {
+        questionNumber++;
+        questionLabel.setText("Question " + questionNumber + ": " + question);
+        optionAButton.setText(optionA);
+        optionBButton.setText(optionB);
+        optionCButton.setText(optionC);
+        optionDButton.setText(optionD);
+    }
+
+    public String getUserAnswer() {
+        return null; // This method should be overridden in a subclass that handles user input
+    }
+
+    public void clearAnswer() {
+        // This method should be overridden in a subclass that handles user input
+    }
+
+    public JButton getOptionAButton() {
+        return optionAButton;
+    }
+
+    public JButton getOptionBButton() {
+        return optionBButton;
+    }
+
+    public JButton getOptionCButton() {
+        return optionCButton;
+    }
+
+    public JButton getOptionDButton() {
+        return optionDButton;
+    }
+
+    public void setQuestionNumber(int i) {
+        questionNumber = i;
+    }
 }

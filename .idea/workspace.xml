@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="added nothing">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="organised into packages">
+      <change afterPath="$PROJECT_DIR$/src/not_used/notDescFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/QuestionFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DescFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/DescFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DescType.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/IntType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MCQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/MCQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MCQFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/QuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuizFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/QuizFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StartFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/StartFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/TestUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/DescFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/DescFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/QuizFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/StartFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/StartFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/TestUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/TestUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +31,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/AppData/Local/Programs/Eclipse Adoptium/jdk-17.0.5.8-hotspot/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,6 +48,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\JAVA\JavaQuiz\src\question_package" />
@@ -56,16 +60,16 @@
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="DescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui_package.DescFrame" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="MCQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MCQFrame" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MCQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MCQFrame" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -85,8 +89,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UI" />
+    <configuration name="notDescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="not_used.notDescFrame" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,11 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.StartFrame" />
         <item itemvalue="Application.TestUI" />
-        <item itemvalue="Application.DescFrame" />
+        <item itemvalue="Application.notDescFrame" />
         <item itemvalue="Application.MCQFrame" />
-        <item itemvalue="Application.UI" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680628909343</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="organised into packages">
+      <created>1680687568344</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680687568360</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,7 +166,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added" />
-    <option name="LAST_COMMIT_MESSAGE" value="added" />
+    <MESSAGE value="organised into packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="organised into packages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
