@@ -1,4 +1,4 @@
-package question_package;
+package not_used;
 
 public class IntType {
 

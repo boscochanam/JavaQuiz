@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="organised into packages">
-      <change afterPath="$PROJECT_DIR$/src/not_used/notDescFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui_package/QuestionFrame.java" afterDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added the Question Classes">
+      <change afterPath="$PROJECT_DIR$/src/question_package/MCQQuestionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/DescType.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/not_used/DescType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/question_package/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/DescFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/DescFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/not_used/IntType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/MCQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/MCQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescQuestionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/QuizFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/StartFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/StartFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/TestUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/TestUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +37,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/AppData/Local/Programs/Eclipse Adoptium/jdk-17.0.5.8-hotspot/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -55,6 +53,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chana\IdeaProjects\JavaQuiz\src\not_used" />
       <recent name="C:\JAVA\JavaQuiz\src\question_package" />
       <recent name="C:\JAVA\JavaQuiz\src\ui_package" />
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />

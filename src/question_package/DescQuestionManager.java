@@ -3,11 +3,11 @@ package question_package;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuestionManager {
+public class DescQuestionManager {
 
     private List<DescType> questions;
 
-    public QuestionManager() {
+    public DescQuestionManager() {
         questions = new ArrayList<>();
         // Add your questions here
         questions.add(new DescType("Is Java a programming language? (Yes/No)", "Yes"));
@@ -28,4 +28,20 @@ public class QuestionManager {
     public int getNumQuestions() {
         return questions.size();
     }
+
+    public int getQuestionCount() {
+        return questions.size();
+    }
+
+    public void checkAnswer(int index, String selectedOption) {
+        DescType question = questions.get(index);
+        String correctAnswer = question.getCorrectAns();
+
+        if (selectedOption.equalsIgnoreCase(correctAnswer)) {
+            System.out.println("Correct answer!");
+        } else {
+            System.out.println("Incorrect answer.");
+        }
+    }
+
 }

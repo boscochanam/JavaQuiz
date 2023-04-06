@@ -2,7 +2,6 @@ package question_package;
 
 public class DescType extends Question {
 
-    private String correctAns;
     private String userAns;
 
     DescType() {
@@ -10,20 +9,21 @@ public class DescType extends Question {
         String q = "Empty Question";
         setQuestion(q);
         System.out.println(getQuestion());
-        correctAns = "hello";
+        setCorrectAns("hello");
     }
 
     public DescType(String que, String ans) {
-        correctAns = ans;
+        setCorrectAns(ans);
         setQuestion(que);
     }
 
     public String getAnswer() {
-        return correctAns;
+        return getCorrectAns();
     }
 
+
     public boolean isCorrect(String userOption) {
-        if (userOption.equals(correctAns))
+        if (userOption.equals(getCorrectAns()))
             return true;
         else
             return false;

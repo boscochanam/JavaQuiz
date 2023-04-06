@@ -1,16 +1,27 @@
 package question_package;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class MCQ extends Question {
 
     private String correctOption;
     private String userOption;
+    private ArrayList<String> options;
     MCQ(){
         super();
-        String q = "Empty Question\n Option 1\n Option 2\n Option 3\n Option 4";
+        String q = "Empty Question";
         setQuestion(q);
         System.out.println(getQuestion());
 
     }
+
+    public MCQ(String s, String a) {
+        super();
+        setQuestion(s);
+        setCorrectAns(a);
+    }
+
     @Override
     public boolean isCorrect(String userOption) {
         if (userOption.equals(correctOption)) return true;
