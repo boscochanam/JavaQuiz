@@ -32,13 +32,11 @@ public class SubmitListener implements ActionListener {
                 correctAnswer = true;
             } else {
                 JOptionPane.showMessageDialog(frame, "Incorrect Answer");
+                correctAnswer = false;
             }
-
-            if (correctAnswer) {
                 // Update the score and show the next question or end the quiz
-                score++; // Increment the score
+                if(correctAnswer) score++;
                 frame.updateScore(score); // Call a method to update the score display in the frame
-
                 currentQuestionNumber[0]++;
                 if (currentQuestionNumber[0] < descQuestionManager.getNumQuestions()) {
                     frame.setQuestion(descQuestionManager.getQuestion(currentQuestionNumber[0]).getQuestion());
@@ -46,7 +44,7 @@ public class SubmitListener implements ActionListener {
                 } else {
                     frame.setVisible(false);
                 }
-            }
+
         }
     }
 

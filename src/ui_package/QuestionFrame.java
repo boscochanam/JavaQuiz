@@ -94,7 +94,7 @@ public class QuestionFrame extends JFrame {
     }
 
     public void updateScore(int points) {
-        score += points;
+        score = points;
         scoreLabel.setText("Score: " + score);
     }
 

@@ -10,11 +10,11 @@ public class DescQuestionManager {
     public DescQuestionManager() {
         questions = new ArrayList<>();
         // Add your questions here
-        questions.add(new DescType("Is Java a programming language? (Yes/No)", "Yes"));
-        questions.add(new DescType("Is this Question 2? (Yes/No)", "Yes"));
-        questions.add(new DescType("Does this question have numbers in it? (Yes/No)", "No"));
-        questions.add(new DescType("Does int hold integer type data? (Yes/No)", "Yes"));
-        questions.add(new DescType("Is CSGO a good game? (Yes/No)", "No"));
+        questions.add(new DescType("What does CSE Stand for?", "Computer Science Engineering"));
+        questions.add(new DescType("What is the capital of India", "New Delhi"));
+        questions.add(new DescType("How many digits are in the binary number system?", "2"));
+        questions.add(new DescType("What does int stand for?", "Integer"));
+        questions.add(new DescType("Who is the PM of India? (Last Name)", "Modi"));
     }
 
     public DescType getQuestion(int index) {
