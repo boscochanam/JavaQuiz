@@ -6,7 +6,10 @@ import java.awt.*;
 public class DescFrame extends QuestionFrame {
 
     private JLabel questionLabel;
+    private int score = 0;
     private JTextField answerField;
+    private JLabel scoreLabel;
+
     private JButton submitButton;
 
     private int questionNumber;
@@ -17,9 +20,10 @@ public class DescFrame extends QuestionFrame {
         questionNumber = 0;
 
         // Initialize GUI components
-        questionLabel = new JLabel();
+        questionLabel = new JLabel("Question/n" + questionNumber + ": ");
         answerField = new JTextField(20);
         submitButton = new JButton("Submit");
+        scoreLabel = new JLabel("Score: " + score);
 
         // Layout components
         JPanel content = new JPanel();
@@ -28,6 +32,7 @@ public class DescFrame extends QuestionFrame {
         content.add(questionLabel);
         content.add(answerField);
         content.add(submitButton);
+        content.add(scoreLabel);
 
         // Add content to frame
         getContentPane().add(content);
@@ -58,6 +63,7 @@ public class DescFrame extends QuestionFrame {
     public void setQuestion(String question) {
         questionNumber++;
         questionLabel.setText("Question " + questionNumber + ": " + question);
+        scoreLabel.setText("Score: " + score);
     }
 
     public String getUserAnswer() {
@@ -75,4 +81,15 @@ public class DescFrame extends QuestionFrame {
     public void setQuestionNumber(int i) {
         questionNumber = i;
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void updateScore(int points) {
+        score += points;
+        scoreLabel.setText("Score: " + score);
+    }
+
+
 }
