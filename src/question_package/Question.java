@@ -1,30 +1,21 @@
 package question_package;
 
-// import java.util.*;
+public interface Question {
 
-public abstract class Question {
-    private int qNo;
-    private String questionDesc;
-    private String correctAns;
+    // Member variables
+    String questionDesc = null;
+    String correctAns = null;
 
-    // Question Description Getter / Setter Functions
-    public void setQuestion(String q){
-        questionDesc = q;
-    }
-    public String getQuestion(){
-        return questionDesc;
-    }
+    // Getter and Setter for questions
+    public void setQuestion(String s);
+    public String getQuestion();
 
+    // Getter and Setter for answers
+    public void setCorrectAns(String ans);
 
-    public void setCorrectAns(String ans) {
-        correctAns = ans;
-    }
+    public String getCorrectAns();
 
-    public String getCorrectAns() {
-        return correctAns;
-    }
-
-    protected abstract String getAnswer();
-    protected abstract boolean isCorrect(String ans);
+    // Answer Checker
+    abstract boolean isCorrect(String ans);
 
 }

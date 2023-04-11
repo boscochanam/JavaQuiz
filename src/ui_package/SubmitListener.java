@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import question_package.DescQuestionManager;
+import question_package.desc.DescQuestionManager;
 
 public class SubmitListener implements ActionListener {
     private final DescQuestionManager descQuestionManager;

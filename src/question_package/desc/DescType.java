@@ -1,8 +1,12 @@
-package question_package;
+package question_package.desc;
 
-public class DescType extends Question {
+import question_package.Question;
+
+public class DescType implements Question {
 
     private String userAns;
+    private String questionDesc;
+    private String correctAns;
 
     DescType() {
         super();
@@ -29,16 +33,22 @@ public class DescType extends Question {
             return false;
     }
 
-    public static void main(String[] args) {
-        String ans;
-
-        DescType d1 = new DescType();
-        ans = d1.getAnswer();
-        if (d1.isCorrect(ans) == true) {
-            System.out.println("Correct Answer!");
-        } else {
-            System.out.println("Wrong Answer!");
-        }
+    public void setQuestion(String q){
+        questionDesc = q;
     }
+    public String getQuestion(){
+        return questionDesc;
+    }
+
+
+    public void setCorrectAns(String ans) {
+        correctAns = ans;
+    }
+
+    public String getCorrectAns() {
+        return correctAns;
+    }
+
+    public static void main(String[] args) {}
 
 }
