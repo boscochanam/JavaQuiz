@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="point score now works">
-      <change afterPath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" afterDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class">
+      <change afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/NewUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/NewUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/NewUITemp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/please_work.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/please_work.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,12 +45,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "150",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "283",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\chana\IdeaProjects\JavaQuiz\src\not_used" />
@@ -58,16 +62,22 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="MCQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MCQFrame" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="NewUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui_package.NewUI" />
       <module name="JavaQuiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui_package.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,11 +105,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewUI" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StartFrame" />
         <item itemvalue="Application.TestUI" />
         <item itemvalue="Application.notDescFrame" />
-        <item itemvalue="Application.MCQFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681064430109</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class">
+      <created>1681230042553</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681230042553</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,7 +197,8 @@
     <MESSAGE value="organised into packages" />
     <MESSAGE value="Will come back to this for MCQ Implementation Later" />
     <MESSAGE value="point score now works" />
-    <option name="LAST_COMMIT_MESSAGE" value="point score now works" />
+    <MESSAGE value="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

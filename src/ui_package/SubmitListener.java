@@ -3,21 +3,23 @@ package ui_package;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 import question_package.desc.DescQuestionManager;
 
 public class SubmitListener implements ActionListener {
     private final DescQuestionManager descQuestionManager;
     private final int[] currentQuestionNumber;
-    private final QuestionFrame frame;
+    private final NewUI frame;
     private int score = 0;
+    private JProgressBar progressBar1;
 
 
-    public SubmitListener(DescQuestionManager descQuestionManager, QuestionFrame frame, int[] currentQuestionNumber) {
+    public SubmitListener(DescQuestionManager descQuestionManager, NewUI frame, int[] currentQuestionNumber) {
         this.descQuestionManager = descQuestionManager;
         this.frame = frame;
         this.currentQuestionNumber = currentQuestionNumber;
+        progressBar1 = (JProgressBar) frame.getProgressBar();
     }
 
     @Override
@@ -35,7 +37,10 @@ public class SubmitListener implements ActionListener {
                 correctAnswer = false;
             }
                 // Update the score and show the next question or end the quiz
-                if(correctAnswer) score++;
+                if(correctAnswer) {
+                    score++;
+                    progressBar1.setValue(score);
+                }
                 frame.updateScore(score); // Call a method to update the score display in the frame
                 currentQuestionNumber[0]++;
                 if (currentQuestionNumber[0] < descQuestionManager.getNumQuestions()) {
