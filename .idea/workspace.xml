@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="added Start Menu">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="UI Overhaul, using .form now">
+      <change afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUI.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="module" />
-    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -27,11 +29,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,27 +45,37 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;150&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;283&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chana\IdeaProjects\JavaQuiz\src\not_used" />
+      <recent name="C:\JAVA\JavaQuiz\src\question_package" />
+      <recent name="C:\JAVA\JavaQuiz\src\ui_package" />
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StartFrame">
-    <configuration name="DescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DescFrame" />
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MCQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MCQFrame" />
+    <configuration name="NewUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui_package.NewUI" />
       <module name="JavaQuiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui_package.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -77,14 +88,14 @@
       </method>
     </configuration>
     <configuration name="TestUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestUI" />
+      <option name="MAIN_CLASS_NAME" value="ui_package.TestUI" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UI" />
+    <configuration name="notDescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="not_used.notDescFrame" />
       <module name="JavaQuiz" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.NewUI" />
         <item itemvalue="Application.StartFrame" />
         <item itemvalue="Application.TestUI" />
-        <item itemvalue="Application.DescFrame" />
-        <item itemvalue="Application.MCQFrame" />
-        <item itemvalue="Application.UI" />
+        <item itemvalue="Application.notDescFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -123,28 +134,56 @@
       <option name="project" value="LOCAL" />
       <updated>1680620167492</updated>
     </task>
-    <task id="LOCAL-00003" summary="added Start Menu">
-      <created>1680626933035</created>
+    <task id="LOCAL-00003" summary="added">
+      <created>1680621700621</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1680626933035</updated>
+      <updated>1680621700621</updated>
     </task>
-    <task id="LOCAL-00004" summary="added Start Menu">
-      <created>1680627075486</created>
+    <task id="LOCAL-00004" summary="added">
+      <created>1680628909343</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1680627075486</updated>
+      <updated>1680628909343</updated>
     </task>
-    <task id="LOCAL-00005" summary="added Start Menu">
-      <created>1681413840952</created>
+    <task id="LOCAL-00005" summary="organised into packages">
+      <created>1680687568344</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1681413840952</updated>
+      <updated>1680687568360</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Will come back to this for MCQ Implementation Later">
+      <created>1680755325508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680755325508</updated>
+    </task>
+    <task id="LOCAL-00007" summary="point score now works">
+      <created>1681064430109</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681064430109</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class">
+      <created>1681230042553</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681230042553</updated>
+    </task>
+    <task id="LOCAL-00009" summary="UI Overhaul, using .form now">
+      <created>1681328244066</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681328244067</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,8 +199,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added" />
-    <MESSAGE value="added Start Menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Start Menu" />
+    <MESSAGE value="organised into packages" />
+    <MESSAGE value="Will come back to this for MCQ Implementation Later" />
+    <MESSAGE value="point score now works" />
+    <MESSAGE value="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class" />
+    <MESSAGE value="UI Overhaul, using .form now" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Overhaul, using .form now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
