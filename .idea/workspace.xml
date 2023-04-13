@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class">
-      <change afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui_package/NewUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui_package/NewUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui_package/NewUITemp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui_package/please_work.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui_package/please_work.java" afterDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="UI Overhaul, using .form now">
+      <change afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUI.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUI.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,14 +43,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "150",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "283",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;150&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;283&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\chana\IdeaProjects\JavaQuiz\src\not_used" />
@@ -105,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NewUI" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.NewUI" />
         <item itemvalue="Application.StartFrame" />
         <item itemvalue="Application.TestUI" />
         <item itemvalue="Application.notDescFrame" />
@@ -178,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681230042553</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="UI Overhaul, using .form now">
+      <created>1681328244066</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681328244067</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,7 +203,8 @@
     <MESSAGE value="Will come back to this for MCQ Implementation Later" />
     <MESSAGE value="point score now works" />
     <MESSAGE value="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class" />
+    <MESSAGE value="UI Overhaul, using .form now" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Overhaul, using .form now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

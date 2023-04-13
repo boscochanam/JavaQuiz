@@ -10,12 +10,12 @@ import question_package.desc.DescQuestionManager;
 public class SubmitListener implements ActionListener {
     private final DescQuestionManager descQuestionManager;
     private final int[] currentQuestionNumber;
-    private final NewUI frame;
+    private final Cards frame;
     private int score = 0;
     private JProgressBar progressBar1;
 
 
-    public SubmitListener(DescQuestionManager descQuestionManager, NewUI frame, int[] currentQuestionNumber) {
+    public SubmitListener(DescQuestionManager descQuestionManager, Cards frame, int[] currentQuestionNumber) {
         this.descQuestionManager = descQuestionManager;
         this.frame = frame;
         this.currentQuestionNumber = currentQuestionNumber;
@@ -48,6 +48,13 @@ public class SubmitListener implements ActionListener {
                     frame.clearAnswer();
                 } else {
                     frame.setVisible(false);
+                }
+
+                if(currentQuestionNumber[0] == 5) {
+                    JOptionPane.showMessageDialog(frame, "You have completed the descriptive quiz. Your score is " + score + "/5");
+
+                    frame.nextCard();
+                    frame.setVisible(true);
                 }
 
         }
