@@ -23,6 +23,7 @@ public class McqQuestionManager {
 
     public String getAnswer(int index) {
         return questions.get(index).getCorrectAns();
+
     }
 
     public int getNumQuestions() {
@@ -45,7 +46,8 @@ public class McqQuestionManager {
     }
 
     public static void main(String[] args) {
-        // write testing code here
+
+        // Testing Code
         McqQuestionManager m = new McqQuestionManager();
         System.out.println("View Questions or Check Answers? \n 1. View Questions \n 2. Check Answers");
         Scanner sc = new Scanner(System.in);
