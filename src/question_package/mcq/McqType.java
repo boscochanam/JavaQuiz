@@ -100,4 +100,44 @@ public class McqType implements Question {
         //System.out.println(m1.getCorrectIndex());
 
     }
+
+    public String getChoiceA() {
+        return options.get(0);
+    }
+
+    public String getChoiceB() {
+        return options.get(1);
+    }
+
+    public String getChoiceC() {
+        return options.get(2);
+    }
+
+    public String getChoiceD() {
+        return options.get(3);
+    }
+
+    public int getCorrectChoice() {
+        return correctIndex;
+    }
+
+    public int getCorrectAnswerIndex() {
+        return correctIndex;
+    }
+
+    public String getAnswerA() {
+        return options.get(0);
+    }
+
+    public String getAnswerB() {
+        return options.get(1);
+    }
+
+    public String getAnswerC() {
+        return options.get(2);
+    }
+
+    public String getAnswerD() {
+        return options.get(3);
+    }
 }

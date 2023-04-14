@@ -536,15 +536,6 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="cdf17" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-                <properties>
-                  <text value="Question Goes Here"/>
-                </properties>
-              </component>
               <component id="64dba" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="17" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -554,7 +545,7 @@
                   <text value="Score: "/>
                 </properties>
               </component>
-              <component id="f290b" class="javax.swing.JButton" binding="dButton" default-binding="true">
+              <component id="cf609" class="javax.swing.JRadioButton" binding="dRadioButton" default-binding="true">
                 <constraints>
                   <grid row="15" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -563,7 +554,7 @@
                   <text value="D"/>
                 </properties>
               </component>
-              <component id="932fd" class="javax.swing.JButton" binding="cButton" default-binding="true">
+              <component id="fc0bc" class="javax.swing.JRadioButton" binding="cRadioButton" default-binding="true">
                 <constraints>
                   <grid row="14" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -572,7 +563,7 @@
                   <text value="C"/>
                 </properties>
               </component>
-              <component id="1f338" class="javax.swing.JButton" binding="bButton" default-binding="true">
+              <component id="ffe62" class="javax.swing.JRadioButton" binding="bRadioButton" default-binding="true">
                 <constraints>
                   <grid row="13" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -581,13 +572,31 @@
                   <text value="B"/>
                 </properties>
               </component>
-              <component id="81ab9" class="javax.swing.JButton" binding="aButton" default-binding="true">
+              <component id="42f4f" class="javax.swing.JRadioButton" binding="aRadioButton" default-binding="true">
                 <constraints>
                   <grid row="12" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
                   <text value="A"/>
+                </properties>
+              </component>
+              <component id="bc68c" class="javax.swing.JButton" binding="submitMcq">
+                <constraints>
+                  <grid row="19" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Submit"/>
+                </properties>
+              </component>
+              <component id="9e8dd" class="javax.swing.JLabel" binding="questionmcq">
+                <constraints>
+                  <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Question Goes Here"/>
                 </properties>
               </component>
             </children>

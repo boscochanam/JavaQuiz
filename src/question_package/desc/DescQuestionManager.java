@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DescQuestionManager {
 
-    private List<DescType> questionArray;
+    private final List<DescType> questionArray;
 
     public DescQuestionManager() {
         questionArray = new ArrayList<>();
@@ -44,4 +44,7 @@ public class DescQuestionManager {
         }
     }
 
+    public int getsize() {
+    return questionArray.size();
+    }
 }

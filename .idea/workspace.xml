@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="UI Overhaul, using .form now">
-      <change afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui_package/MCQListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUI.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/DescFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUITemp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/QuestionFrame.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/please_work.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/please_work.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/ui_package/SubmitListener.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,7 +68,7 @@
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaQuiz" />
