@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="UI Overhaul, using .form now">
-      <change afterPath="$PROJECT_DIR$/src/ui_package/MCQListener.java" afterDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="MCQ FINALLY WORKS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/DescFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/NewUITemp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/QuestionFrame.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/please_work.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/please_work.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681328244067</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added some annotations, MCQ somewhat works&#10;LOTS OF WORK TO BE DONE WITH MCQ ACTION LISTENER">
+      <created>1681486341016</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681486341016</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Made some improvements to MCQ">
+      <created>1681551152561</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681551152561</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,7 +218,10 @@
     <MESSAGE value="point score now works" />
     <MESSAGE value="Added MCQ Class, with MCQ Question Bank Class&#10;You can test it using the main function in the qb class" />
     <MESSAGE value="UI Overhaul, using .form now" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Overhaul, using .form now" />
+    <MESSAGE value="Added some annotations, MCQ somewhat works&#10;LOTS OF WORK TO BE DONE WITH MCQ ACTION LISTENER" />
+    <MESSAGE value="Made some improvements to MCQ" />
+    <MESSAGE value="MCQ FINALLY WORKS" />
+    <option name="LAST_COMMIT_MESSAGE" value="MCQ FINALLY WORKS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

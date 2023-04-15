@@ -140,4 +140,13 @@ public class McqType implements Question {
     public String getAnswerD() {
         return options.get(3);
     }
+
+    public String[] getAnswerOptions() {
+        String[] answerOptions = new String[4];
+        answerOptions[0] = getAnswerA();
+        answerOptions[1] = getAnswerB();
+        answerOptions[2] = getAnswerC();
+        answerOptions[3] = getAnswerD();
+        return answerOptions;
+    }
 }
