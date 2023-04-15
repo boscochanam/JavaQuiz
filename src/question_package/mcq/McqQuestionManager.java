@@ -1,8 +1,11 @@
 package question_package.mcq;
 
-        import java.util.ArrayList;
-        import java.util.List;
-        import java.util.Scanner;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class McqQuestionManager {
 
@@ -10,11 +13,36 @@ public class McqQuestionManager {
 
     public McqQuestionManager() {
         questions = new ArrayList<>();
-        // Add your questions here
-        questions.add(new McqType("What is the capital of India?", "New Delhi", "Mumbai", "Kolkata", "Chennai", "New Delhi"));
-        questions.add(new McqType("How is the first letter of the alphabet?", "a", "b", "c", "d", "a"));
-        questions.add(new McqType("What is the largest country in the world?", "India", "Russia", "China", "USA", "Russia"));
-        questions.add(new McqType("What is the capital of China?", "Beijing", "Shanghai", "Hong Kong", "Taipei", "Beijing"));
+        try {
+            // Establish a connection to the database
+            String url = "jdbc:mysql://localhost:3306/javaquiz";
+            String username = "root";
+            String password = "root";
+            Connection con = DriverManager.getConnection(url, username, password);
+
+            // Execute an SQL query to retrieve the questions and answers
+            Statement stmt = con.createStatement();
+            String sql = "SELECT * FROM mcq_questions";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            // Iterate through the result set and create McqType objects
+            while (rs.next()) {
+                String question = rs.getString("question");
+                String option1 = rs.getString("option1");
+                String option2 = rs.getString("option2");
+                String option3 = rs.getString("option3");
+                String option4 = rs.getString("option4");
+                String correctAns = rs.getString("correct_answer");
+                questions.add(new McqType(question, option1, option2, option3, option4, correctAns));
+            }
+
+            // Close the resources
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static int getNumberOfQuestions() {
@@ -50,17 +78,7 @@ public class McqQuestionManager {
     }
 
     public static void main(String[] args) {
-
-        // Testing Code
         McqQuestionManager m = new McqQuestionManager();
-        //System.out.println("View Questions or Check Answers? \n 1. View Questions \n 2. Check Answers");
-        //Scanner sc = new Scanner(System.in);
-
-        System.out.println(m.getQuestion(1).getAnswerOptions()[0]);
-        System.out.println(m.getQuestion(1).getAnswerOptions()[1]);
-        System.out.println(m.getQuestion(1).getAnswerOptions()[2]);
-        System.out.println(m.getQuestion(1).getAnswerOptions()[3]);
-
-
+        System.out.println(m.getQuestion(0).getQuestion());
     }
 }

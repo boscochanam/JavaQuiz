@@ -93,7 +93,7 @@ public class Cards extends JFrame implements ActionListener {
                 // Get current question
                 McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
 
-                // Get answer options
+                // Get answer option
 
                 // Compare selected choice with correct answer
                 if (selectedChoice == currentQuestion.getCorrectAnswerIndex()) {
