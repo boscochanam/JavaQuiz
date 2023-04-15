@@ -8,13 +8,14 @@ import javax.swing.*;
 
 import question_package.desc.DescQuestionManager;
 import question_package.mcq.McqQuestionManager;
+import question_package.mcq.McqType;
 
 public class SubmitListener implements ActionListener {
     private final DescQuestionManager descQuestionManager;
     private final McqQuestionManager mcqQuestionManager;
     public static int[] currentQuestionNumber = new int[0];
     private final Cards frame;
-    private int score = 0;
+    private static int score = 0;
     private String current = "card1";
     private JProgressBar progressBar1;
     boolean correctAnswer;
@@ -25,6 +26,14 @@ public class SubmitListener implements ActionListener {
         this.frame = frame;
         this.currentQuestionNumber = currentQuestionNumber;
         progressBar1 = (JProgressBar) frame.getProgressBar();
+    }
+
+    public SubmitListener() {
+        this.descQuestionManager = null;
+        this.mcqQuestionManager = null;
+        this.frame = null;
+        this.currentQuestionNumber = null;
+        progressBar1 = null;
     }
 
     // Action Listener for Submit Button
@@ -68,6 +77,15 @@ public class SubmitListener implements ActionListener {
             } else {
                 frame.nextCard();
                 currentQuestionNumber[0] = 0;
+                frame.mcqScore.setText("Score: " + score);
+                McqQuestionManager mcq_questions = new McqQuestionManager();
+                McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
+                frame.setQuestionmcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion());
+                frame.getAButton().setText(currentQuestion.getAnswerOptions()[0]);
+                frame.getBButton().setText(currentQuestion.getAnswerOptions()[1]);
+                frame.getCButton().setText(currentQuestion.getAnswerOptions()[2]);
+                frame.getDButton().setText(currentQuestion.getAnswerOptions()[3]);
+                currentQuestionNumber[0]++;
             }
         }
 
@@ -80,6 +98,15 @@ public class SubmitListener implements ActionListener {
         return currentQuestionNumber[0];
     }
 
-}
+    static int getScore(){
+        return score;
+    }
+
+    static void setScore(int n) {
+        score = n;
+    }
+    }
+
+
 
 

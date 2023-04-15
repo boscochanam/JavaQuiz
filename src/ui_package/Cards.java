@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static ui_package.SubmitListener.currentQuestionNumber;
+import static ui_package.SubmitListener.getScore;
 
 public class Cards extends JFrame implements ActionListener {
     private JPanel panel1;
@@ -27,6 +28,8 @@ public class Cards extends JFrame implements ActionListener {
     private JRadioButton aRadioButton;
     private JLabel questionmcq;
     private JButton submitMcq;
+    JLabel mcqScore;
+    private JLabel selectedOption;
     private static int choice = -1;
 
     public Cards() {
@@ -89,23 +92,19 @@ public class Cards extends JFrame implements ActionListener {
 
                 // Get current question
                 McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
-                System.out.println(currentQuestion.getQuestion());
-                System.out.println(currentQuestion.getAnswerOptions()[0]);
-                System.out.println(currentQuestion.getAnswerOptions()[1]);
-                System.out.println(currentQuestion.getAnswerOptions()[2]);
-                System.out.println(currentQuestion.getAnswerOptions()[3]);
 
                 // Get answer options
-                getAButton().setText(currentQuestion.getAnswerOptions()[0]);
-                getBButton().setText(currentQuestion.getAnswerOptions()[1]);
-                getCButton().setText(currentQuestion.getAnswerOptions()[2]);
-                getDButton().setText(currentQuestion.getAnswerOptions()[3]);
 
                 // Compare selected choice with correct answer
                 if (selectedChoice == currentQuestion.getCorrectAnswerIndex()) {
                     System.out.println("Correct");
+                    int score = SubmitListener.getScore();
+                    SubmitListener.setScore(score + 1);
+                    mcqScore.setText("Score: " + getScore());
                 } else {
                     System.out.println("Incorrect");
+                    int score = SubmitListener.getScore();
+                    mcqScore.setText("Score: " + getScore());
                 }
 
                 // Update progress bar
@@ -113,8 +112,14 @@ public class Cards extends JFrame implements ActionListener {
 
                 // Move to next question if available
                 if (currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions()) {
-                    setQuestionmcq(mcq_questions.getQuestion(progressBar1.getValue()).getQuestion());
+                    setQuestionmcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion());
+                    getAButton().setText(currentQuestion.getAnswerOptions()[0]);
+                    getBButton().setText(currentQuestion.getAnswerOptions()[1]);
+                    getCButton().setText(currentQuestion.getAnswerOptions()[2]);
+                    getDButton().setText(currentQuestion.getAnswerOptions()[3]);
                     clearSelection();
+                    currentQuestionNumber[0]++;
+
                 } else {
                     // All questions answered, disable radio buttons and submit button
                     submitMcq.setEnabled(false);
@@ -141,15 +146,19 @@ public class Cards extends JFrame implements ActionListener {
     int getChoice() {
         if (aRadioButton.isSelected()) {
             choice = 0;
+            selectedOption.setText("Selected Option: " + aRadioButton.getText());
             //System.out.println("Choice: " + choice);
         } else if (bRadioButton.isSelected()) {
             choice = 1;
+            selectedOption.setText("Selected Option: " + bRadioButton.getText());
             //System.out.println("Choice: " + choice);
         } else if (cRadioButton.isSelected()) {
             choice = 2;
+            selectedOption.setText("Selected Option: " + cRadioButton.getText());
             //System.out.println("Choice: " + choice);
         } else if (dRadioButton.isSelected()) {
             choice = 3;
+            selectedOption.setText("Selected Option: " + dRadioButton.getText());
             //System.out.println("Choice: " + choice);
         }
         return choice;
@@ -181,6 +190,7 @@ public class Cards extends JFrame implements ActionListener {
             cards.getBButton().setText(mcq_questions.getQuestion(i).getAnswerB());
             cards.getCButton().setText(mcq_questions.getQuestion(i).getAnswerC());
             cards.getDButton().setText(mcq_questions.getQuestion(i).getAnswerD());
+            cards.selectedOption.setText("Selected Option: None");
 
             if (cards.getChoice() == mcq_questions.getQuestion(i).getCorrectAnswerIndex()) {
                 System.out.println("Correct");
