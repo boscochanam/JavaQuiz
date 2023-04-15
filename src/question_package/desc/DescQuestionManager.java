@@ -17,6 +17,10 @@ public class DescQuestionManager {
         questionArray.add(new DescType("Who is the PM of India? (Last Name)", "Modi"));
     }
 
+    public int getNumberOfQuestions() {
+        return questionArray.size();
+    }
+
     public DescType getQuestion(int index) {
         return questionArray.get(index);
     }

@@ -6,7 +6,7 @@ package question_package.mcq;
 
 public class McqQuestionManager {
 
-    private List<McqType> questions;
+    private static List<McqType> questions;
 
     public McqQuestionManager() {
         questions = new ArrayList<>();
@@ -15,6 +15,10 @@ public class McqQuestionManager {
         questions.add(new McqType("How is the first letter of the alphabet?", "a", "b", "c", "d", "a"));
         questions.add(new McqType("What is the largest country in the world?", "India", "Russia", "China", "USA", "Russia"));
         questions.add(new McqType("What is the capital of China?", "Beijing", "Shanghai", "Hong Kong", "Taipei", "Beijing"));
+    }
+
+    public static int getNumberOfQuestions() {
+        return questions.size();
     }
 
     public McqType getQuestion(int index) {
@@ -49,28 +53,14 @@ public class McqQuestionManager {
 
         // Testing Code
         McqQuestionManager m = new McqQuestionManager();
-        System.out.println("View Questions or Check Answers? \n 1. View Questions \n 2. Check Answers");
-        Scanner sc = new Scanner(System.in);
-        if (sc.nextInt() == 1) {
-            for (int i = 0; i < m.getNumQuestions(); i++) {
-                System.out.println("Printing Question " + i);
-                System.out.println(m.getQuestion(i).getQuestion());
-                System.out.println("Printing Options for Question " + i);
-                m.getQuestion(i).printOptions();
-                System.out.println("Printing Correct Answer for Question " + i);
-                System.out.println(m.getQuestion(i).getCorrectAns());
-            }
-        } else {
-            for (int i = 0; i < m.getNumQuestions(); i++) {
-                System.out.println("Printing Question " + i);
-                System.out.println(m.getQuestion(i).getQuestion());
-                System.out.println("Printing Options for Question " + i);
-                m.getQuestion(i).printOptions();
-                System.out.println("Enter your answer for Question " + i);
-                sc.nextLine();
-                m.checkAnswer(i, sc.nextLine());
-            }
-        }
+        //System.out.println("View Questions or Check Answers? \n 1. View Questions \n 2. Check Answers");
+        //Scanner sc = new Scanner(System.in);
+
+        System.out.println(m.getQuestion(1).getAnswerOptions()[0]);
+        System.out.println(m.getQuestion(1).getAnswerOptions()[1]);
+        System.out.println(m.getQuestion(1).getAnswerOptions()[2]);
+        System.out.println(m.getQuestion(1).getAnswerOptions()[3]);
+
 
     }
 }

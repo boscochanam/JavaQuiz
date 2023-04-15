@@ -1,5 +1,6 @@
 package ui_package;
 
+import question_package.desc.DescQuestionManager;
 import question_package.mcq.McqQuestionManager;
 import question_package.mcq.McqType;
 
@@ -8,6 +9,8 @@ import javax.swing.plaf.basic.BasicRadioButtonMenuItemUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static ui_package.SubmitListener.currentQuestionNumber;
 
 public class Cards extends JFrame implements ActionListener {
     private JPanel panel1;
@@ -85,7 +88,18 @@ public class Cards extends JFrame implements ActionListener {
                 McqQuestionManager mcq_questions = new McqQuestionManager();
 
                 // Get current question
-                McqType currentQuestion = mcq_questions.getQuestion(progressBar1.getValue());
+                McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
+                System.out.println(currentQuestion.getQuestion());
+                System.out.println(currentQuestion.getAnswerOptions()[0]);
+                System.out.println(currentQuestion.getAnswerOptions()[1]);
+                System.out.println(currentQuestion.getAnswerOptions()[2]);
+                System.out.println(currentQuestion.getAnswerOptions()[3]);
+
+                // Get answer options
+                getAButton().setText(currentQuestion.getAnswerOptions()[0]);
+                getBButton().setText(currentQuestion.getAnswerOptions()[1]);
+                getCButton().setText(currentQuestion.getAnswerOptions()[2]);
+                getDButton().setText(currentQuestion.getAnswerOptions()[3]);
 
                 // Compare selected choice with correct answer
                 if (selectedChoice == currentQuestion.getCorrectAnswerIndex()) {
@@ -98,7 +112,7 @@ public class Cards extends JFrame implements ActionListener {
                 progressBar1.setValue(progressBar1.getValue() + 1);
 
                 // Move to next question if available
-                if (progressBar1.getValue() < progressBar1.getMaximum()) {
+                if (currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions()) {
                     setQuestionmcq(mcq_questions.getQuestion(progressBar1.getValue()).getQuestion());
                     clearSelection();
                 } else {
