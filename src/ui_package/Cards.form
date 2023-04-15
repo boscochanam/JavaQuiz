@@ -299,7 +299,7 @@
               <card name="Card1"/>
             </constraints>
             <properties/>
-            <border type="etched" title="Descriptive Type"/>
+            <border type="etched" title="MCQ Type"/>
             <children>
               <vspacer id="7a90">
                 <constraints>
@@ -536,7 +536,7 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="64dba" class="javax.swing.JLabel">
+              <component id="64dba" class="javax.swing.JLabel" binding="mcqScore">
                 <constraints>
                   <grid row="17" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -596,7 +596,16 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="Question Goes Here"/>
+                  <text value="Press Submit to Start MCQ"/>
+                </properties>
+              </component>
+              <component id="20f0e" class="javax.swing.JLabel" binding="selectedOption">
+                <constraints>
+                  <grid row="10" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="Selected Option: None"/>
                 </properties>
               </component>
             </children>
