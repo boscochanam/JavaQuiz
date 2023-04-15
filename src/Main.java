@@ -4,11 +4,16 @@ import question_package.mcq.McqQuestionManager;
 import ui_package.*;
 
 public class Main {
+
+
+
     public static void main(String[] args) {
 
         // Making a new Card Object holding different frames for different question types
         Cards cards = new Cards();
         cards.setVisible(true);
+
+
 
         // Making objects for the different question types
         DescQuestionManager desc_questions = new DescQuestionManager();
@@ -18,7 +23,7 @@ public class Main {
         final int[] currentQuestionNumber = {0};
 
         // Setting the first question
-        cards.setQuestion(desc_questions.getQuestion(currentQuestionNumber[0]).getQuestion());
+        cards.setQuestion(desc_questions.getQuestion(currentQuestionNumber[0]).getQuestion(),currentQuestionNumber[0]);
 
         // Adding a listener to the submit button
         JButton submit = cards.getSubmit();

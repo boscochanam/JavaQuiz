@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="MCQ FINALLY WORKS">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="MCQ Polished up now, transitions smoothly, and score carries over">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
@@ -197,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681551152561</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MCQ Polished up now, transitions smoothly, and score carries over">
+      <created>1681561259371</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681561259371</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,7 +228,8 @@
     <MESSAGE value="Added some annotations, MCQ somewhat works&#10;LOTS OF WORK TO BE DONE WITH MCQ ACTION LISTENER" />
     <MESSAGE value="Made some improvements to MCQ" />
     <MESSAGE value="MCQ FINALLY WORKS" />
-    <option name="LAST_COMMIT_MESSAGE" value="MCQ FINALLY WORKS" />
+    <MESSAGE value="MCQ Polished up now, transitions smoothly, and score carries over" />
+    <option name="LAST_COMMIT_MESSAGE" value="MCQ Polished up now, transitions smoothly, and score carries over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

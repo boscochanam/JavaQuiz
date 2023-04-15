@@ -112,7 +112,7 @@ public class Cards extends JFrame implements ActionListener {
 
                 // Move to next question if available
                 if (currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions()) {
-                    setQuestionmcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion());
+                    setQuestionmcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
                     getAButton().setText(currentQuestion.getAnswerOptions()[0]);
                     getBButton().setText(currentQuestion.getAnswerOptions()[1]);
                     getCButton().setText(currentQuestion.getAnswerOptions()[2]);
@@ -185,7 +185,7 @@ public class Cards extends JFrame implements ActionListener {
         McqQuestionManager mcq_questions = new McqQuestionManager();
         for(int i=0;i<mcq_questions.getNumQuestions();i++)
         {
-            cards.setQuestionmcq(mcq_questions.getQuestion(i).getQuestion());
+            cards.setQuestionmcq(mcq_questions.getQuestion(i).getQuestion(), i);
             cards.getAButton().setText(mcq_questions.getQuestion(i).getAnswerA());
             cards.getBButton().setText(mcq_questions.getQuestion(i).getAnswerB());
             cards.getCButton().setText(mcq_questions.getQuestion(i).getAnswerC());
@@ -206,8 +206,8 @@ public class Cards extends JFrame implements ActionListener {
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
         cardLayout.next(panel1);
     }
-    public void setQuestion(String question) {
-        this.question.setText(question);
+    public void setQuestion(String question, int qno) {
+        this.question.setText("Question " + (qno + 1) + ": " + question);
     }
 
     public JButton getSubmit() {
@@ -217,9 +217,9 @@ public class Cards extends JFrame implements ActionListener {
     public Object getProgressBar() {
         return progressBar1;
     }
-    public void setQuestionmcq(String s)
+    public void setQuestionmcq(String s, int qno)
     {
-        questionmcq.setText(s);
+        questionmcq.setText("Question " + (qno + 1) + ": " + s);
     }
 
     public void getQuestionmcq(String s)
