@@ -5,7 +5,6 @@ import question_package.mcq.McqQuestionManager;
 import question_package.mcq.McqType;
 
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicRadioButtonMenuItemUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +14,7 @@ import static ui_package.SubmitListener.getScore;
 
 public class Cards extends JFrame implements ActionListener {
     private JPanel panel1;
-    private JPanel panelName;
+    private JPanel descPanel;
     private JTextField answerField;
     private JProgressBar progressBar1;
     private JLabel question;
@@ -35,6 +34,8 @@ public class Cards extends JFrame implements ActionListener {
     private JTextField NameSubmission;
     private JLabel nameLabel;
     private JButton nameSubmit;
+    private JPanel endPanel;
+    private JPanel intPanel;
     private static int choice = -1;
 
     public Cards() {
@@ -45,7 +46,7 @@ public class Cards extends JFrame implements ActionListener {
         panel1.setLayout(new CardLayout());
 
         panel1.add(startPanel, "card1");
-        panel1.add(panelName, "card2");
+        panel1.add(descPanel, "card2");
         panel1.add(mcqPanel, "card3");
 
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
