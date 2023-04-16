@@ -30,6 +30,11 @@ public class Cards extends JFrame implements ActionListener {
     private JButton submitMcq;
     JLabel mcqScore;
     private JLabel selectedOption;
+    private JPanel startPanel;
+    private JLabel StartHeading;
+    private JTextField NameSubmission;
+    private JLabel nameLabel;
+    private JButton nameSubmit;
     private static int choice = -1;
 
     public Cards() {
@@ -39,8 +44,9 @@ public class Cards extends JFrame implements ActionListener {
 
         panel1.setLayout(new CardLayout());
 
-        panel1.add(panelName, "card1");
-        panel1.add(mcqPanel, "card2");
+        panel1.add(startPanel, "card1");
+        panel1.add(panelName, "card2");
+        panel1.add(mcqPanel, "card3");
 
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
         cardLayout.show(panel1, "card1");
@@ -80,6 +86,20 @@ public class Cards extends JFrame implements ActionListener {
                 // Handle D button click
                 int choice = getChoice();
                 System.out.println(choice);
+            }
+        });
+
+        nameSubmit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = NameSubmission.getText();
+                if (name.length() > 0) {
+                    CardLayout cardLayout = (CardLayout) panel1.getLayout();
+                    JOptionPane.showMessageDialog(panel1, "Welcome " + name + "!");
+                    cardLayout.show(panel1, "card2");
+                } else {
+                    JOptionPane.showMessageDialog(panel1, "Please enter your name");
+                }
             }
         });
 

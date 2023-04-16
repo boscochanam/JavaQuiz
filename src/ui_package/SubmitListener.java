@@ -15,7 +15,6 @@ public class SubmitListener implements ActionListener {
     public static int[] currentQuestionNumber = new int[0];
     private final Cards cards;
     private static int score = 0;
-    private String current = "card1";
     private JProgressBar progressBar1;
     boolean correctAnswer;
 
@@ -88,13 +87,6 @@ public class SubmitListener implements ActionListener {
             }
         }
 
-    }
-    static int getQno(){
-        return currentQuestionNumber[0];
-    }
-
-    static int setQno(){
-        return currentQuestionNumber[0];
     }
 
     static int getScore(){
