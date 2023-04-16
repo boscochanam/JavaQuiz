@@ -47,8 +47,4 @@ public class DescQuestionManager {
             System.out.println("Incorrect answer.");
         }
     }
-
-    public int getsize() {
-    return questionArray.size();
-    }
 }

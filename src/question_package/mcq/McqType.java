@@ -149,4 +149,21 @@ public class McqType implements Question {
         answerOptions[3] = getAnswerD();
         return answerOptions;
     }
+
+    public boolean getOption1() {
+        return options.get(0).equals(getCorrectAns());
+    }
+
+    public boolean getOption2() {
+        return options.get(1).equals(getCorrectAns());
+    }
+
+    public boolean getOption3() {
+        return options.get(2).equals(getCorrectAns());
+    }
+
+    public boolean getOption4() {
+        return options.get(3).equals(getCorrectAns());
+    }
+
 }

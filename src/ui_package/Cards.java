@@ -5,6 +5,7 @@ import question_package.mcq.McqQuestionManager;
 import question_package.mcq.McqType;
 
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicRadioButtonMenuItemUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,7 +26,7 @@ public class Cards extends JFrame implements ActionListener {
     private JRadioButton cRadioButton;
     private JRadioButton bRadioButton;
     private JRadioButton aRadioButton;
-    private JLabel questionmcq;
+    private JLabel questionMcq;
     private JButton submitMcq;
     JLabel mcqScore;
     private JLabel selectedOption;
@@ -114,8 +115,6 @@ public class Cards extends JFrame implements ActionListener {
                 // Get current question
                 McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
 
-                // Get answer option
-
                 // Compare selected choice with correct answer
                 if (selectedChoice == currentQuestion.getCorrectAnswerIndex()) {
                     System.out.println("Correct");
@@ -124,6 +123,8 @@ public class Cards extends JFrame implements ActionListener {
                     mcqScore.setText("Score: " + getScore());
                 } else {
                     System.out.println("Incorrect");
+                    System.out.println("Question: " + currentQuestion.getQuestion());
+                    System.out.println("Correct answer: " + currentQuestion.getAnswerOptions()[currentQuestion.getCorrectAnswerIndex()]);
                     int score = SubmitListener.getScore();
                     mcqScore.setText("Score: " + getScore());
                 }
@@ -131,15 +132,18 @@ public class Cards extends JFrame implements ActionListener {
                 // Update progress bar
                 progressBar1.setValue(progressBar1.getValue() + 1);
 
+                System.out.println(currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions());
+
                 // Move to next question if available
                 if (currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions()) {
-                    setQuestionmcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
-                    getAButton().setText(currentQuestion.getAnswerOptions()[0]);
-                    getBButton().setText(currentQuestion.getAnswerOptions()[1]);
-                    getCButton().setText(currentQuestion.getAnswerOptions()[2]);
-                    getDButton().setText(currentQuestion.getAnswerOptions()[3]);
-                    clearSelection();
+                    System.out.println("Next question");
                     currentQuestionNumber[0]++;
+                    setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
+                    getAButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[0]);
+                    getBButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[1]);
+                    getCButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[2]);
+                    getDButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[3]);
+                    clearSelection();
 
                 } else {
                     // All questions answered, disable radio buttons and submit button
@@ -191,7 +195,7 @@ public class Cards extends JFrame implements ActionListener {
         cards.setVisible(true);
 
         // Show option dialog for card selection
-        String[] options = {"Card 1", "Card 2"};
+        String[] options = {"Card 1", "Card 3"};
         int oChoice = JOptionPane.showOptionDialog(cards, "Choose a card to show", "Card Selection",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
 
@@ -200,23 +204,24 @@ public class Cards extends JFrame implements ActionListener {
         if (oChoice == 0) {
             cardLayout.show(cards.panel1, "card1");
         } else if (oChoice == 1) {
-            cardLayout.show(cards.panel1, "card2");
+            cardLayout.show(cards.panel1, "card3");
         }
 
         McqQuestionManager mcq_questions = new McqQuestionManager();
         for(int i=0;i<mcq_questions.getNumQuestions();i++)
         {
-            cards.setQuestionmcq(mcq_questions.getQuestion(i).getQuestion(), i);
-            cards.getAButton().setText(mcq_questions.getQuestion(i).getAnswerA());
-            cards.getBButton().setText(mcq_questions.getQuestion(i).getAnswerB());
-            cards.getCButton().setText(mcq_questions.getQuestion(i).getAnswerC());
-            cards.getDButton().setText(mcq_questions.getQuestion(i).getAnswerD());
+            System.out.println("Question: " + mcq_questions.getQuestion(i).getQuestion());
+            System.out.println("Option A:" + mcq_questions.getQuestion(i).getAnswerA());
+            System.out.println("Option B:" + mcq_questions.getQuestion(i).getAnswerB());
+            System.out.println("Option C:" + mcq_questions.getQuestion(i).getAnswerC());
+            System.out.println("Option D:" + mcq_questions.getQuestion(i).getAnswerD());
             cards.selectedOption.setText("Selected Option: None");
 
             if (cards.getChoice() == mcq_questions.getQuestion(i).getCorrectAnswerIndex()) {
                 System.out.println("Correct");
             } else {
                 System.out.println("Incorrect");
+                System.out.println("Correct Answer: " + mcq_questions.getQuestion(i).getCorrectAnswerIndex());
             }
         }
 
@@ -238,14 +243,9 @@ public class Cards extends JFrame implements ActionListener {
     public Object getProgressBar() {
         return progressBar1;
     }
-    public void setQuestionmcq(String s, int qno)
+    public void setQuestionMcq(String s, int qno)
     {
-        questionmcq.setText("Question " + (qno + 1) + ": " + s);
-    }
-
-    public void getQuestionmcq(String s)
-    {
-        questionmcq.getText();
+        questionMcq.setText("Question " + (qno + 1) + ": " + s);
     }
 
 
