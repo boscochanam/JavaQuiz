@@ -21,6 +21,8 @@ public class DescQuestionManager {
         return questionArray.size();
     }
 
+
+
     public DescType getQuestion(int index) {
         return questionArray.get(index);
     }
