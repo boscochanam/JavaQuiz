@@ -17,7 +17,7 @@ public class McqQuestionManager {
             // Establish a connection to the database
             String url = "jdbc:mysql://localhost:3306/javaquiz";
             String username = "root";
-            String password = "Anianu0708@";
+            String password = "password";
             Connection con = DriverManager.getConnection(url, username, password);
 
             // Execute an SQL query to retrieve the questions and answers
@@ -78,7 +78,17 @@ public class McqQuestionManager {
     }
 
     public static void main(String[] args) {
-        McqQuestionManager m = new McqQuestionManager();
-        System.out.println(m.getQuestion(0).getQuestion());
+
+        McqQuestionManager mcq = new McqQuestionManager();
+        for (int i = 0; i < mcq.getNumberOfQuestions(); i++) {
+            System.out.println(mcq.getQuestion(i).getQuestion());
+            System.out.println(mcq.getQuestion(i).getOption1());
+            System.out.println(mcq.getQuestion(i).getOption2());
+            System.out.println(mcq.getQuestion(i).getOption3());
+            System.out.println(mcq.getQuestion(i).getOption4());
+            System.out.println(mcq.getQuestion(i).getCorrectAns());
+            System.out.println();
+        }
     }
 }
+

@@ -1,0 +1,194 @@
+Index: src/ui_package/DescFrame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ui_package;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class DescFrame extends QuestionFrame {\r\n\r\n    private JLabel questionLabel;\r\n    private JTextField answerField;\r\n    private JButton submitButton;\r\n\r\n    private int questionNumber;\r\n\r\n    public DescFrame() {\r\n        super();\r\n\r\n        questionNumber = 0;\r\n\r\n        // Initialize GUI components\r\n        questionLabel = new JLabel();\r\n        answerField = new JTextField(20);\r\n        submitButton = new JButton(\"Submit\");\r\n\r\n        // Layout components\r\n        JPanel content = new JPanel();\r\n        content.setLayout(new GridLayout(3, 1, 10, 10)); // 3 rows, 1 column\r\n        content.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));\r\n        content.add(questionLabel);\r\n        content.add(answerField);\r\n        content.add(submitButton);\r\n\r\n        // Add content to frame\r\n        getContentPane().add(content);\r\n\r\n        // Set behavior\r\n        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        pack();\r\n        setLocationRelativeTo(null);\r\n\r\n        // Set preferred size\r\n        Dimension preferredSize = new Dimension(500, 300);\r\n        content.setPreferredSize(preferredSize);\r\n        setPreferredSize(preferredSize);\r\n        pack();\r\n    }\r\n\r\n    public DescFrame(JPanel questionPanel) {\r\n    }\r\n\r\n    public String getQuestionText() {\r\n        return questionLabel.getText();\r\n    }\r\n\r\n    public int getQuestionNumber() {\r\n        return questionNumber;\r\n    }\r\n\r\n    public void setQuestion(String question) {\r\n        questionNumber++;\r\n        questionLabel.setText(\"Question \" + questionNumber + \": \" + question);\r\n    }\r\n\r\n    public String getUserAnswer() {\r\n        return answerField.getText();\r\n    }\r\n\r\n    public void clearAnswer() {\r\n        answerField.setText(\"\");\r\n    }\r\n\r\n    public JButton getSubmit() {\r\n        return submitButton;\r\n    }\r\n\r\n    public void setQuestionNumber(int i) {\r\n        questionNumber = i;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ui_package/DescFrame.java b/src/ui_package/DescFrame.java
+--- a/src/ui_package/DescFrame.java	
++++ b/src/ui_package/DescFrame.java	
+@@ -5,9 +5,9 @@
+ 
+ public class DescFrame extends QuestionFrame {
+ 
+-    private JLabel questionLabel;
+-    private JTextField answerField;
+-    private JButton submitButton;
++    private JLabel lblQuestion;
++    private JTextField txtAnswer;
++    private JButton btnSubmit;
+ 
+     private int questionNumber;
+ 
+@@ -17,17 +17,36 @@
+         questionNumber = 0;
+ 
+         // Initialize GUI components
+-        questionLabel = new JLabel();
+-        answerField = new JTextField(20);
+-        submitButton = new JButton("Submit");
++        lblQuestion = new JLabel();
++        lblQuestion.setFont(new Font("Arial", Font.BOLD, 16));
++        lblQuestion.setForeground(Color.BLUE);
++
++        txtAnswer = new JTextField(20);
++        txtAnswer.setFont(new Font("Arial", Font.PLAIN, 14));
++
++        btnSubmit = new JButton("Submit");
++        btnSubmit.setIcon(new ImageIcon("submit.png"));
++        btnSubmit.setFont(new Font("Arial", Font.BOLD, 14));
++        btnSubmit.setForeground(Color.WHITE);
++        btnSubmit.setBackground(Color.BLUE);
+ 
+         // Layout components
+         JPanel content = new JPanel();
+-        content.setLayout(new GridLayout(3, 1, 10, 10)); // 3 rows, 1 column
+-        content.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+-        content.add(questionLabel);
+-        content.add(answerField);
+-        content.add(submitButton);
++        content.setLayout(new GridBagLayout());
++
++        GridBagConstraints gbc = new GridBagConstraints();
++        gbc.gridx = 0;
++        gbc.gridy = 0;
++        gbc.insets = new Insets(10, 10, 10, 10);
++        gbc.anchor = GridBagConstraints.WEST;
++        content.add(lblQuestion, gbc);
++
++        gbc.gridy = 1;
++        content.add(txtAnswer, gbc);
++
++        gbc.gridy = 2;
++        gbc.anchor = GridBagConstraints.CENTER;
++        content.add(btnSubmit, gbc);
+ 
+         // Add content to frame
+         getContentPane().add(content);
+@@ -48,7 +67,7 @@
+     }
+ 
+     public String getQuestionText() {
+-        return questionLabel.getText();
++        return lblQuestion.getText();
+     }
+ 
+     public int getQuestionNumber() {
+@@ -57,19 +76,19 @@
+ 
+     public void setQuestion(String question) {
+         questionNumber++;
+-        questionLabel.setText("Question " + questionNumber + ": " + question);
++        lblQuestion.setText("Question " + questionNumber + ": " + question);
+     }
+ 
+     public String getUserAnswer() {
+-        return answerField.getText();
++        return txtAnswer.getText();
+     }
+ 
+     public void clearAnswer() {
+-        answerField.setText("");
++        txtAnswer.setText("");
+     }
+ 
+     public JButton getSubmit() {
+-        return submitButton;
++        return btnSubmit;
+     }
+ 
+     public void setQuestionNumber(int i) {
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"44b69682-0a3e-47f5-b3d0-481d80332bc5\" name=\"Changes\" comment=\"Added the Question Classes\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/question_package/MCQQuestionManager.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/ui_package/SubmitListener.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/question_package/DescType.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/not_used/DescType.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/question_package/DescType.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/question_package/DescType.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/question_package/IntType.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/not_used/IntType.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/question_package/MCQ.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/question_package/MCQ.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/question_package/Question.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/question_package/Question.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/question_package/QuestionManager.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/question_package/DescQuestionManager.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/ui_package/MCQFrame.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ui_package/MCQFrame.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Test\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2NdXI5nsRoIqtVGlbktC2LF2le8\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\chana\\IdeaProjects\\JavaQuiz\\src\\not_used\" />\r\n      <recent name=\"C:\\JAVA\\JavaQuiz\\src\\question_package\" />\r\n      <recent name=\"C:\\JAVA\\JavaQuiz\\src\\ui_package\" />\r\n      <recent name=\"C:\\Anirudh\\SIT PUNE\\JAVA\\JavaQuiz\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"MCQFrame\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"MCQFrame\" />\r\n      <module name=\"JavaQuiz\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"JavaQuiz\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"StartFrame\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"StartFrame\" />\r\n      <module name=\"JavaQuiz\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TestUI\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"ui_package.TestUI\" />\r\n      <module name=\"JavaQuiz\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"notDescFrame\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"not_used.notDescFrame\" />\r\n      <module name=\"JavaQuiz\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.StartFrame\" />\r\n        <item itemvalue=\"Application.TestUI\" />\r\n        <item itemvalue=\"Application.notDescFrame\" />\r\n        <item itemvalue=\"Application.MCQFrame\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"44b69682-0a3e-47f5-b3d0-481d80332bc5\" name=\"Changes\" comment=\"\" />\r\n      <created>1679994854520</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1679994854520</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"added\">\r\n      <created>1680620012146</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680620012146</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"added\">\r\n      <created>1680620167492</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680620167492</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"added\">\r\n      <created>1680621700621</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680621700621</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"added\">\r\n      <created>1680628909343</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680628909343</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"organised into packages\">\r\n      <created>1680687568344</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1680687568360</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"added\" />\r\n    <MESSAGE value=\"organised into packages\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"organised into packages\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.IllegalArgumentException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,18 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added the Question Classes">
+-      <change afterPath="$PROJECT_DIR$/src/question_package/MCQQuestionManager.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
++    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="added">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/question_package/DescType.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/not_used/DescType.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/question_package/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescType.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/question_package/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/not_used/IntType.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/question_package/MCQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/MCQ.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/question_package/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/Question.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/question_package/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/DescQuestionManager.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/MCQFrame.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ui_package/DescFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/DescFrame.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -46,11 +38,6 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+-  }
+-}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\chana\IdeaProjects\JavaQuiz\src\not_used" />
+@@ -60,9 +47,15 @@
+     </key>
+   </component>
+   <component name="RunManager" selected="Application.Main">
+-    <configuration name="MCQFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="MCQFrame" />
++    <configuration name="DescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="ui_package.DescFrame" />
+       <module name="JavaQuiz" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="ui_package.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -98,10 +91,10 @@
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.Main" />
++        <item itemvalue="Application.DescFrame" />
+         <item itemvalue="Application.StartFrame" />
+         <item itemvalue="Application.TestUI" />
+         <item itemvalue="Application.notDescFrame" />
+-        <item itemvalue="Application.MCQFrame" />
+       </list>
+     </recent_temporary>
+   </component>

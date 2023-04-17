@@ -21,6 +21,8 @@ public class DescQuestionManager {
         return questionArray.size();
     }
 
+
+
     public DescType getQuestion(int index) {
         return questionArray.get(index);
     }
@@ -46,9 +48,5 @@ public class DescQuestionManager {
         } else {
             System.out.println("Incorrect answer.");
         }
-    }
-
-    public int getsize() {
-    return questionArray.size();
     }
 }

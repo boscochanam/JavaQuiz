@@ -13,8 +13,6 @@ public class Main {
         Cards cards = new Cards();
         cards.setVisible(true);
 
-
-
         // Making objects for the different question types
         DescQuestionManager desc_questions = new DescQuestionManager();
         McqQuestionManager mcq_questions = new McqQuestionManager();

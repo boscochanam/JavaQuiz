@@ -22,7 +22,7 @@ public class SubmitListener implements ActionListener {
         this.descQuestionManager = descQuestionManager;
         this.mcqQuestionManager = mcqQuestionManager;
         this.cards = cards;
-        this.currentQuestionNumber = currentQuestionNumber;
+        SubmitListener.currentQuestionNumber = currentQuestionNumber;
         progressBar1 = (JProgressBar) cards.getProgressBar();
     }
 
@@ -30,7 +30,7 @@ public class SubmitListener implements ActionListener {
         this.descQuestionManager = null;
         this.mcqQuestionManager = null;
         this.cards = null;
-        this.currentQuestionNumber = null;
+        currentQuestionNumber = null;
         progressBar1 = null;
     }
 
@@ -78,12 +78,14 @@ public class SubmitListener implements ActionListener {
                 cards.mcqScore.setText("Score: " + score);
                 McqQuestionManager mcq_questions = new McqQuestionManager();
                 McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
-                cards.setQuestionmcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
+                cards.setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
                 cards.getAButton().setText(currentQuestion.getAnswerOptions()[0]);
                 cards.getBButton().setText(currentQuestion.getAnswerOptions()[1]);
                 cards.getCButton().setText(currentQuestion.getAnswerOptions()[2]);
                 cards.getDButton().setText(currentQuestion.getAnswerOptions()[3]);
-                currentQuestionNumber[0]++;
+
+                System.out.println("Question Description: " + currentQuestion.getQuestion());
+                System.out.println("Answer Options: " + currentQuestion.getAnswerOptions()[0] + ", " + currentQuestion.getAnswerOptions()[1] + ", " + currentQuestion.getAnswerOptions()[2] + ", " + currentQuestion.getAnswerOptions()[3]);
             }
         }
 
