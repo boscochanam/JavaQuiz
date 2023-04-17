@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added a start menu">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaQuiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaQuiz.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/MCQListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
-    </list>
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="JDBC working now ezpz" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681631242393</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="JDBC working now ezpz">
+      <created>1681659555484</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681659555484</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +243,8 @@
     <MESSAGE value="MCQ FINALLY WORKS" />
     <MESSAGE value="MCQ Polished up now, transitions smoothly, and score carries over" />
     <MESSAGE value="Added a start menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a start menu" />
+    <MESSAGE value="JDBC working now ezpz" />
+    <option name="LAST_COMMIT_MESSAGE" value="JDBC working now ezpz" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
