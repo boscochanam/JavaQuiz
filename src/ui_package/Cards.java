@@ -39,6 +39,7 @@ public class Cards extends JFrame implements ActionListener {
     private JPanel intPanel;
     private static int choice = -1;
 
+
     public Cards() {
         progressBar1.setMinimum(0);
         progressBar1.setMaximum(9);
@@ -52,6 +53,15 @@ public class Cards extends JFrame implements ActionListener {
 
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
         cardLayout.show(panel1, "card1");
+
+//        question.setFont(new Font("Helvetica", Font.PLAIN, 12));
+//        scoreLabel.setFont(new Font("Helvetica", Font.PLAIN, 12));
+//        questionMcq.setFont(new Font("Helvetica", Font.PLAIN, 12));
+//        mcqScore.setFont(new Font("Helvetica", Font.PLAIN, 12));
+//        StartHeading.setFont(new Font("Helvetica", Font.BOLD, 18));
+//        nameLabel.setFont(new Font("Helvetica", Font.PLAIN, 12));
+//        selectedOption.setFont(new Font("Helvetica", Font.PLAIN, 12));
+
 
         this.add(panel1);
 
@@ -118,14 +128,14 @@ public class Cards extends JFrame implements ActionListener {
                 // Compare selected choice with correct answer
                 if (selectedChoice == currentQuestion.getCorrectAnswerIndex()) {
                     System.out.println("Correct");
-                    int score = SubmitListener.getScore();
+                    int score = getScore();
                     SubmitListener.setScore(score + 1);
                     mcqScore.setText("Score: " + getScore());
                 } else {
                     System.out.println("Incorrect");
                     System.out.println("Question: " + currentQuestion.getQuestion());
                     System.out.println("Correct answer: " + currentQuestion.getAnswerOptions()[currentQuestion.getCorrectAnswerIndex()]);
-                    int score = SubmitListener.getScore();
+                    int score = getScore();
                     mcqScore.setText("Score: " + getScore());
                 }
 
