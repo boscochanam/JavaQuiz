@@ -37,13 +37,19 @@ public class Cards extends JFrame implements ActionListener {
     private JButton nameSubmit;
     private JPanel endPanel;
     private JPanel intPanel;
+    JProgressBar mcqProgress;
+    private JLabel finalscore;
     private static int choice = -1;
 
 
     public Cards() {
         progressBar1.setMinimum(0);
-        progressBar1.setMaximum(9);
-        progressBar1.setValue(0);
+        progressBar1.setMaximum(new DescQuestionManager().getNumberOfQuestions());
+        progressBar1.setValue(1);
+
+        mcqProgress.setMinimum(0);
+        mcqProgress.setMaximum(new McqQuestionManager().getNumQuestions());
+        mcqProgress.setValue(1);
 
         panel1.setLayout(new CardLayout());
 
@@ -53,14 +59,6 @@ public class Cards extends JFrame implements ActionListener {
 
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
         cardLayout.show(panel1, "card1");
-
-//        question.setFont(new Font("Helvetica", Font.PLAIN, 12));
-//        scoreLabel.setFont(new Font("Helvetica", Font.PLAIN, 12));
-//        questionMcq.setFont(new Font("Helvetica", Font.PLAIN, 12));
-//        mcqScore.setFont(new Font("Helvetica", Font.PLAIN, 12));
-//        StartHeading.setFont(new Font("Helvetica", Font.BOLD, 18));
-//        nameLabel.setFont(new Font("Helvetica", Font.PLAIN, 12));
-//        selectedOption.setFont(new Font("Helvetica", Font.PLAIN, 12));
 
 
         this.add(panel1);
@@ -140,12 +138,13 @@ public class Cards extends JFrame implements ActionListener {
                 }
 
                 // Update progress bar
-                progressBar1.setValue(progressBar1.getValue() + 1);
+                mcqProgress.setValue(currentQuestionNumber[0] + 2);
+                System.out.println("Progress bar MCQ: " + mcqProgress.getValue());
 
                 System.out.println(currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions());
 
                 // Move to next question if available
-                if (currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions()) {
+                if (currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions() - 1) {
                     System.out.println("Next question");
                     currentQuestionNumber[0]++;
                     setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
@@ -157,9 +156,13 @@ public class Cards extends JFrame implements ActionListener {
 
                 } else {
                     // All questions answered, disable radio buttons and submit button
+                    nextCard();
+                    finalscore.setText(String.valueOf(getScore()));
                     submitMcq.setEnabled(false);
                     disableRadioButtons();
+
                 }
+
             }
         });
     }

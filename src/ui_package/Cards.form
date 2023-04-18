@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ui_package.Cards">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="CardLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="591" height="400"/>
+      <xy x="20" y="20" width="604" height="400"/>
     </constraints>
     <properties>
       <background color="-13947600"/>
@@ -20,7 +20,7 @@
         </properties>
         <border type="etched" title="MCQ Type"/>
         <children>
-          <component id="dcdf4" class="javax.swing.JProgressBar" default-binding="true">
+          <component id="dcdf4" class="javax.swing.JProgressBar" binding="mcqProgress">
             <constraints>
               <grid row="15" column="0" row-span="1" col-span="19" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag weightx="0.0" weighty="0.0"/>
@@ -505,273 +505,133 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="5945f" layout-manager="GridBagLayout">
+          <grid id="f8df" layout-manager="GridBagLayout">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-13947600"/>
+            </properties>
             <border type="etched" title="Java Quiz"/>
             <children>
-              <vspacer id="f1852">
+              <component id="9adf" class="javax.swing.JProgressBar" default-binding="true">
                 <constraints>
-                  <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <hspacer id="4eba8">
-                <constraints>
-                  <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="1fe1b">
-                <constraints>
-                  <grid row="0" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="b0705">
-                <constraints>
-                  <grid row="0" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="ff1b0">
-                <constraints>
-                  <grid row="0" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="e589f">
-                <constraints>
-                  <grid row="0" column="14" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="20f27">
-                <constraints>
-                  <grid row="0" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <vspacer id="45cd5">
-                <constraints>
-                  <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <hspacer id="4311c">
-                <constraints>
-                  <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="14058">
-                <constraints>
-                  <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="3d499">
-                <constraints>
-                  <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="e6efa">
-                <constraints>
-                  <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="ccd4b">
-                <constraints>
-                  <grid row="8" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="c97a6">
-                <constraints>
-                  <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="6438d">
-                <constraints>
-                  <grid row="10" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="b9589">
-                <constraints>
-                  <grid row="11" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="feedc">
-                <constraints>
-                  <grid row="12" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="4c625">
-                <constraints>
-                  <grid row="13" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="8e6b2">
-                <constraints>
-                  <grid row="14" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="9a428">
-                <constraints>
-                  <grid row="15" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="75d6f">
-                <constraints>
-                  <grid row="16" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="44afd">
-                <constraints>
-                  <grid row="17" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="a08cd">
-                <constraints>
-                  <grid row="18" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="d53b7">
-                <constraints>
-                  <grid row="19" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="a0596">
-                <constraints>
-                  <grid row="20" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="20ca8">
-                <constraints>
-                  <grid row="21" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="60c9e">
-                <constraints>
-                  <grid row="22" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <vspacer id="f79bc">
-                <constraints>
-                  <grid row="0" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <vspacer id="d52d2">
-                <constraints>
-                  <grid row="0" column="17" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <vspacer id="ed653">
-                <constraints>
-                  <grid row="0" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <vspacer id="8546a">
-                <constraints>
-                  <grid row="0" column="19" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <vspacer id="a7427">
-                <constraints>
-                  <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <vspacer id="42d82">
-                <constraints>
-                  <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <hspacer id="e8ea1">
-                <constraints>
-                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="45f91">
-                <constraints>
-                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="60435">
-                <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="2509f">
-                <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="debaa">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </hspacer>
-              <component id="35781" class="javax.swing.JProgressBar" default-binding="true">
-                <constraints>
-                  <grid row="23" column="1" row-span="1" col-span="19" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="11" column="0" row-span="1" col-span="20" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties/>
               </component>
-              <component id="34f0" class="javax.swing.JLabel">
+              <component id="d7945" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="End of Quiz"/>
+                  <font name="Cascadia Code" size="20" style="1"/>
+                  <foreground color="-2103575"/>
+                  <text value="Test Completed"/>
                 </properties>
               </component>
-              <component id="38fca" class="javax.swing.JLabel">
+              <component id="dabfa" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="9" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="3" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="FInal Score: "/>
+                  <font name="Cascadia Code" style="1"/>
+                  <foreground color="-16661862"/>
+                  <text value="Final Score:"/>
                 </properties>
               </component>
-              <component id="42ef6" class="javax.swing.JButton">
+              <component id="670ef" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="17" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
-                  <text value="End Quiz"/>
+                  <text value="   "/>
+                </properties>
+              </component>
+              <component id="95dfd" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="        "/>
+                </properties>
+              </component>
+              <component id="a6f21" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="  "/>
+                </properties>
+              </component>
+              <component id="5b338" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="   "/>
+                </properties>
+              </component>
+              <component id="e5b02" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="    "/>
+                </properties>
+              </component>
+              <component id="e1354" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="9" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="    "/>
+                </properties>
+              </component>
+              <component id="29c6e" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="10" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="    "/>
+                </properties>
+              </component>
+              <component id="1ad72" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="     "/>
+                </properties>
+              </component>
+              <component id="8051f" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="7" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <text value="     "/>
+                </properties>
+              </component>
+              <component id="1688d" class="javax.swing.JLabel" binding="finalscore">
+                <constraints>
+                  <grid row="5" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties>
+                  <font name="Cascadia Code" size="48" style="1"/>
+                  <text value="0"/>
                 </properties>
               </component>
             </children>

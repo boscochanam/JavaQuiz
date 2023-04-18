@@ -54,11 +54,14 @@ public class SubmitListener implements ActionListener {
                 correctAnswer = false;
             }
 
+            System.out.println("Current Bar: " + currentQuestionNumber[0]+1);
+            progressBar1.setValue(currentQuestionNumber[0]+2);
+
             // Incrementing Score if Correct Answer
             if (correctAnswer) {
                 score++;
-                progressBar1.setValue(currentQuestionNumber[0]);
             }
+
 
             // Clearing the Text Field
             cards.clearAnswer();
@@ -83,7 +86,7 @@ public class SubmitListener implements ActionListener {
                 cards.getBButton().setText(currentQuestion.getAnswerOptions()[1]);
                 cards.getCButton().setText(currentQuestion.getAnswerOptions()[2]);
                 cards.getDButton().setText(currentQuestion.getAnswerOptions()[3]);
-
+                cards.mcqProgress.setValue(1);
                 System.out.println("Question Description: " + currentQuestion.getQuestion());
                 System.out.println("Answer Options: " + currentQuestion.getAnswerOptions()[0] + ", " + currentQuestion.getAnswerOptions()[1] + ", " + currentQuestion.getAnswerOptions()[2] + ", " + currentQuestion.getAnswerOptions()[3]);
             }

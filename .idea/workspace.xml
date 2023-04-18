@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="made nice ui changes">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Will come back to this for MCQ Implementation Later">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-04-2023_08_01_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-04-2023_08_01_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaQuiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaQuiz.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bruh" />
+        <entry key="$PROJECT_DIR$" value="module+for_stuff" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,11 +52,11 @@
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;150&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;283&quot;,
     &quot;git-widget-placeholder&quot;: &quot;pogUI&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.32.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propGUI&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -246,7 +248,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/JDBC" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -280,16 +294,6 @@
           <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ui_package/SubmitListener.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
