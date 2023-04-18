@@ -302,7 +302,7 @@
                   <text value="     "/>
                 </properties>
               </component>
-              <component id="413b8" class="javax.swing.JLabel">
+              <component id="413b8" class="javax.swing.JLabel" binding="leaderboard1">
                 <constraints>
                   <grid row="14" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -313,7 +313,7 @@
                   <text value="1. Empty"/>
                 </properties>
               </component>
-              <component id="fbf91" class="javax.swing.JLabel">
+              <component id="fbf91" class="javax.swing.JLabel" binding="leaderboard2">
                 <constraints>
                   <grid row="15" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -324,7 +324,7 @@
                   <text value="2. Empty"/>
                 </properties>
               </component>
-              <component id="35c30" class="javax.swing.JLabel">
+              <component id="35c30" class="javax.swing.JLabel" binding="leaderboard3">
                 <constraints>
                   <grid row="16" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>

@@ -12,8 +12,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static ui_package.SubmitListener.currentQuestionNumber;
-import static ui_package.SubmitListener.getScore;
+import static ui_package.SubmitListener.*;
 
 public class Cards extends JFrame implements ActionListener {
     private JPanel panel1;
@@ -47,6 +46,9 @@ public class Cards extends JFrame implements ActionListener {
     private JLabel intScore;
     private JProgressBar intProgress;
     private JButton startAgainButton;
+    private JLabel leaderboard1;
+    private JLabel leaderboard2;
+    private JLabel leaderboard3;
     private static int choice = -1;
 
 
@@ -234,6 +236,26 @@ public class Cards extends JFrame implements ActionListener {
                 clearSelection();
                 intSubmit.setEnabled(true);
                 intAnswerField.setEnabled(true);
+                currentQuestionNumber[0] = 0;
+
+                DescQuestionManager desc_questions = new DescQuestionManager();
+                setQuestion(desc_questions.getQuestion(currentQuestionNumber[0]).getQuestion(),currentQuestionNumber[0]);
+                scoreLabel.setText("Score: 0");
+                answerField.setText("");
+                intAnswerField.setText("");
+                setScore(0);
+
+                progressBar1.setMinimum(0);
+                progressBar1.setMaximum(new DescQuestionManager().getNumberOfQuestions());
+                progressBar1.setValue(1);
+
+                mcqProgress.setMinimum(0);
+                mcqProgress.setMaximum(new McqQuestionManager().getNumQuestions());
+                mcqProgress.setValue(1);
+
+                intProgress.setMinimum(0);
+                intProgress.setMaximum(new IntQuestionManager().getNumQuestions());
+                intProgress.setValue(1);
             }
         });
     }

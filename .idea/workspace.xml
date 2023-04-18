@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="UI Improvements">
-      <change afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntQuestionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntegerType.java" afterDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added Exception Handling for Integer Type Questions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/integer_type/IntType.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
     </list>
@@ -278,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681809230648</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added Exception Handling for Integer Type Questions">
+      <created>1681819773658</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681819773658</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,7 +327,8 @@
     <MESSAGE value="Fixed the user being able to select multiple mcqs at once" />
     <MESSAGE value="Fixed the user being able to select multiple MCQs at once and fixed the &quot;Current Option&quot; bugs" />
     <MESSAGE value="UI Improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Improvements" />
+    <MESSAGE value="Added Exception Handling for Integer Type Questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Exception Handling for Integer Type Questions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
