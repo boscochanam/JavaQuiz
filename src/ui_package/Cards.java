@@ -1,6 +1,8 @@
 package ui_package;
 
 import question_package.desc.DescQuestionManager;
+import question_package.integer_type.IntQuestionManager;
+import question_package.integer_type.IntegerType;
 import question_package.mcq.McqQuestionManager;
 import question_package.mcq.McqType;
 
@@ -36,9 +38,15 @@ public class Cards extends JFrame implements ActionListener {
     private JLabel nameLabel;
     private JButton nameSubmit;
     private JPanel endPanel;
-    private JPanel intPanel;
     JProgressBar mcqProgress;
     private JLabel finalscore;
+    private JPanel intPanel;
+    private JButton intSubmit;
+    private JTextField intAnswerField;
+    private JLabel intQuestion;
+    private JLabel intScore;
+    private JProgressBar intProgress;
+    private JButton startAgainButton;
     private static int choice = -1;
 
 
@@ -51,12 +59,17 @@ public class Cards extends JFrame implements ActionListener {
         mcqProgress.setMaximum(new McqQuestionManager().getNumQuestions());
         mcqProgress.setValue(1);
 
+        intProgress.setMinimum(0);
+        intProgress.setMaximum(new IntQuestionManager().getNumQuestions());
+        intProgress.setValue(1);
+
         panel1.setLayout(new CardLayout());
 
         panel1.add(startPanel, "card1");
         panel1.add(descPanel, "card2");
         panel1.add(mcqPanel, "card3");
-        panel1.add(endPanel,"card4");
+        panel1.add(intPanel, "card4");
+        panel1.add(endPanel,"card5");
 
         ButtonGroup mcqButtonGroup = new ButtonGroup();
         mcqButtonGroup.add(aRadioButton);
@@ -150,7 +163,14 @@ public class Cards extends JFrame implements ActionListener {
 
                 } else {
                     // All questions answered, disable radio buttons and submit button
+                    // Also move onto Integer Panel
+
                     nextCard();
+                    intQuestion.setText(new IntQuestionManager().getQuestion(0).getQuestion());
+                    intScore.setText("Score: " + getScore());
+                    currentQuestionNumber[0] = 0;
+
+
                     finalscore.setText(String.valueOf(getScore()));
                     submitMcq.setEnabled(false);
                     disableRadioButtons();
@@ -159,6 +179,70 @@ public class Cards extends JFrame implements ActionListener {
 
             }
         });
+
+        intSubmit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    // Get selected choice
+                    int userAnswerInt = Integer.parseInt(intAnswerField.getText());
+                    IntQuestionManager int_questions = new IntQuestionManager();
+
+                    // Get current question
+                    IntegerType currentQuestion = int_questions.getQuestion(currentQuestionNumber[0]);
+
+                    // Compare selected choice with correct answer
+                    int score = getScore();
+                    if (Integer.toString(userAnswerInt).equals(currentQuestion.getCorrectAns())) {
+                        SubmitListener.setScore(score + 1);
+                    }
+                    intScore.setText("Score: " + getScore());
+
+                    // Update progress bar
+                    intProgress.setValue(currentQuestionNumber[0] + 2);
+
+                    // Move to next question if available
+                    if (currentQuestionNumber[0] < IntQuestionManager.getNumberOfQuestions()-1){
+                        currentQuestionNumber[0]++;
+                        System.out.println("New Question: " + currentQuestionNumber[0] );
+                        intQuestion.setText(int_questions.getQuestion(currentQuestionNumber[0]).getQuestion());
+                        intAnswerField.setText("");
+                    } else {
+                        nextCard();
+                        finalscore.setText(String.valueOf(getScore()));
+                        intSubmit.setEnabled(false);
+                        intAnswerField.setEnabled(false);
+                    }
+                } catch (NumberFormatException ex) {
+                    // Show a dialog box to inform the user
+                    JOptionPane.showMessageDialog(null, "Please enter an integer as the answer.", "Answer Format", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+
+        startAgainButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CardLayout cardLayout = (CardLayout) panel1.getLayout();
+                cardLayout.show(panel1, "card1");
+                SubmitListener.setScore(0);
+                mcqProgress.setValue(0);
+                intProgress.setValue(0);
+                submitMcq.setEnabled(true);
+                enableRadioButtons();
+                clearSelection();
+                intSubmit.setEnabled(true);
+                intAnswerField.setEnabled(true);
+            }
+        });
+    }
+
+    private void enableRadioButtons() {
+        aRadioButton.setEnabled(true);
+        bRadioButton.setEnabled(true);
+        cRadioButton.setEnabled(true);
+        dRadioButton.setEnabled(true);
     }
 
     private void disableRadioButtons() {

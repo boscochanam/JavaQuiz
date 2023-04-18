@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Fixed the user being able to select multiple MCQs at once and fixed the &quot;Current Option&quot; bugs">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="UI Improvements">
+      <change afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntQuestionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntegerType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/integer_type/IntType.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "150",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "613",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "231",
     "git-widget-placeholder": "pogUI",
     "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
     "project.structure.last.edited": "Modules",
@@ -64,6 +66,32 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="Cards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui_package.Cards" />
+      <module name="JavaQuiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui_package.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntQuestionManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="question_package.integer_type.IntQuestionManager" />
+      <module name="JavaQuiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question_package.integer_type.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaQuiz" />
@@ -91,27 +119,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui_package.TestUI" />
-      <module name="JavaQuiz" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="notDescFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="not_used.notDescFrame" />
-      <module name="JavaQuiz" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Cards" />
+        <item itemvalue="Application.IntQuestionManager" />
         <item itemvalue="Application.NewUI" />
         <item itemvalue="Application.StartFrame" />
-        <item itemvalue="Application.TestUI" />
-        <item itemvalue="Application.notDescFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681805637802</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="UI Improvements">
+      <created>1681809230648</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681809230648</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,7 +322,8 @@
     <MESSAGE value="Fixed the progression bars, and added an end screen" />
     <MESSAGE value="Fixed the user being able to select multiple mcqs at once" />
     <MESSAGE value="Fixed the user being able to select multiple MCQs at once and fixed the &quot;Current Option&quot; bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the user being able to select multiple MCQs at once and fixed the &quot;Current Option&quot; bugs" />
+    <MESSAGE value="UI Improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
