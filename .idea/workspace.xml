@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Will come back to this for MCQ Implementation Later">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Fixed the progression bars, and added an end screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681698502278</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixed the progression bars, and added an end screen">
+      <created>1681804143195</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681804143195</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,7 +282,8 @@
     <MESSAGE value="JDBC working now ezpz" />
     <MESSAGE value="lklk" />
     <MESSAGE value="made nice ui changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="made nice ui changes" />
+    <MESSAGE value="Fixed the progression bars, and added an end screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the progression bars, and added an end screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

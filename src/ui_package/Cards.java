@@ -58,6 +58,12 @@ public class Cards extends JFrame implements ActionListener {
         panel1.add(mcqPanel, "card3");
         panel1.add(endPanel,"card4");
 
+        ButtonGroup mcqButtonGroup = new ButtonGroup();
+        mcqButtonGroup.add(aRadioButton);
+        mcqButtonGroup.add(bRadioButton);
+        mcqButtonGroup.add(cRadioButton);
+        mcqButtonGroup.add(dRadioButton);
+
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
         cardLayout.show(panel1, "card1");
 
