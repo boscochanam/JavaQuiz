@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Fixed the progression bars, and added an end screen">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Fixed the user being able to select multiple mcqs at once">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681804143195</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed the user being able to select multiple mcqs at once">
+      <created>1681804539868</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681804539868</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +291,8 @@
     <MESSAGE value="lklk" />
     <MESSAGE value="made nice ui changes" />
     <MESSAGE value="Fixed the progression bars, and added an end screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the progression bars, and added an end screen" />
+    <MESSAGE value="Fixed the user being able to select multiple mcqs at once" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the user being able to select multiple mcqs at once" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -76,7 +76,6 @@ public class Cards extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 // Handle A button click
                 int choice = getChoice();
-                System.out.println(choice);
             }
         });
 
@@ -85,7 +84,6 @@ public class Cards extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 // Handle B button click
                 int choice = getChoice();
-                System.out.println(choice);
             }
         });
 
@@ -94,7 +92,6 @@ public class Cards extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 // Handle C button click
                 int choice = getChoice();
-                System.out.println(choice);
             }
         });
 
@@ -103,7 +100,6 @@ public class Cards extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 // Handle D button click
                 int choice = getChoice();
-                System.out.println(choice);
             }
         });
 
@@ -132,31 +128,17 @@ public class Cards extends JFrame implements ActionListener {
                 McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
 
                 // Compare selected choice with correct answer
+                int score = getScore();
                 if (selectedChoice == currentQuestion.getCorrectAnswerIndex()) {
-                    System.out.println("Correct");
-                    int score = getScore();
                     SubmitListener.setScore(score + 1);
-                    mcqScore.setText("Score: " + getScore());
-                } else {
-                    System.out.println("Incorrect");
-                    System.out.println("Question: " + currentQuestion.getQuestion());
-                    System.out.println("Correct answer: " + currentQuestion.getAnswerOptions()[currentQuestion.getCorrectAnswerIndex()]);
-                    int score = getScore();
-                    mcqScore.setText("Score: " + getScore());
                 }
+                mcqScore.setText("Score: " + getScore());
 
                 // Update progress bar
                 mcqProgress.setValue(currentQuestionNumber[0] + 2);
-                //System.out.println("Progress bar MCQ: " + mcqProgress.getValue());
-
-                //System.out.println(currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions());
-
-                System.out.println("Current Question NUmber: " + currentQuestionNumber[0]);
-                System.out.println((McqQuestionManager.getNumberOfQuestions()));
 
                 // Move to next question if available
                 if (currentQuestionNumber[0] < McqQuestionManager.getNumberOfQuestions()-1){
-                    System.out.println("Next question");
                     currentQuestionNumber[0]++;
                     setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
                     getAButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[0]);
@@ -164,6 +146,7 @@ public class Cards extends JFrame implements ActionListener {
                     getCButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[2]);
                     getDButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[3]);
                     clearSelection();
+                    getChoice();
 
                 } else {
                     // All questions answered, disable radio buttons and submit button
@@ -215,40 +198,6 @@ public class Cards extends JFrame implements ActionListener {
 
 
     public static void main(String[] args) {
-        Cards cards = new Cards();
-        cards.setVisible(true);
-
-        // Show option dialog for card selection
-        String[] options = {"Card 1", "Card 3"};
-        int oChoice = JOptionPane.showOptionDialog(cards, "Choose a card to show", "Card Selection",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-
-        // Update CardLayout based on user's choice
-        CardLayout cardLayout = (CardLayout) cards.panel1.getLayout();
-        if (oChoice == 0) {
-            cardLayout.show(cards.panel1, "card1");
-        } else if (oChoice == 1) {
-            cardLayout.show(cards.panel1, "card3");
-        }
-
-        McqQuestionManager mcq_questions = new McqQuestionManager();
-        for(int i=0;i<mcq_questions.getNumQuestions();i++)
-        {
-            System.out.println("Question: " + mcq_questions.getQuestion(i).getQuestion());
-            System.out.println("Option A:" + mcq_questions.getQuestion(i).getAnswerA());
-            System.out.println("Option B:" + mcq_questions.getQuestion(i).getAnswerB());
-            System.out.println("Option C:" + mcq_questions.getQuestion(i).getAnswerC());
-            System.out.println("Option D:" + mcq_questions.getQuestion(i).getAnswerD());
-            cards.selectedOption.setText("Selected Option: None");
-
-            if (cards.getChoice() == mcq_questions.getQuestion(i).getCorrectAnswerIndex()) {
-                System.out.println("Correct");
-            } else {
-                System.out.println("Incorrect");
-                System.out.println("Correct Answer: " + mcq_questions.getQuestion(i).getCorrectAnswerIndex());
-            }
-        }
-
 
     }
 
