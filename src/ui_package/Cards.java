@@ -69,7 +69,7 @@ public class Cards extends JFrame implements ActionListener {
 
 
         this.add(panel1);
-        setSize(800, 600);
+        setSize(1200, 600);
 
         aRadioButton.addActionListener(new ActionListener() {
             @Override

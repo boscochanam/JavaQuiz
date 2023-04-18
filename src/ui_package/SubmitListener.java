@@ -54,7 +54,7 @@ public class SubmitListener implements ActionListener {
                 correctAnswer = false;
             }
 
-            System.out.println("Current Bar: " + currentQuestionNumber[0]+1);
+            System.out.println("Current Bar:" + currentQuestionNumber[0]+1);
             progressBar1.setValue(currentQuestionNumber[0]+2);
 
             // Incrementing Score if Correct Answer
