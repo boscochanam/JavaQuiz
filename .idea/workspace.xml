@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Will come back to this for MCQ Implementation Later">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-04-2023_08_01_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-04-2023_08_01_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaQuiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaQuiz.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

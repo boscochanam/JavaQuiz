@@ -56,12 +56,14 @@ public class Cards extends JFrame implements ActionListener {
         panel1.add(startPanel, "card1");
         panel1.add(descPanel, "card2");
         panel1.add(mcqPanel, "card3");
+        panel1.add(endPanel,"card4");
 
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
         cardLayout.show(panel1, "card1");
 
 
         this.add(panel1);
+        setSize(800, 600);
 
         aRadioButton.addActionListener(new ActionListener() {
             @Override
@@ -139,12 +141,15 @@ public class Cards extends JFrame implements ActionListener {
 
                 // Update progress bar
                 mcqProgress.setValue(currentQuestionNumber[0] + 2);
-                System.out.println("Progress bar MCQ: " + mcqProgress.getValue());
+                //System.out.println("Progress bar MCQ: " + mcqProgress.getValue());
 
-                System.out.println(currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions());
+                //System.out.println(currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions());
+
+                System.out.println("Current Question NUmber: " + currentQuestionNumber[0]);
+                System.out.println((McqQuestionManager.getNumberOfQuestions()));
 
                 // Move to next question if available
-                if (currentQuestionNumber[0] < (new DescQuestionManager().getNumberOfQuestions()) + McqQuestionManager.getNumberOfQuestions() - 1) {
+                if (currentQuestionNumber[0] < McqQuestionManager.getNumberOfQuestions()-1){
                     System.out.println("Next question");
                     currentQuestionNumber[0]++;
                     setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
