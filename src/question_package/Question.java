@@ -7,15 +7,14 @@ public interface Question {
     String correctAns = null;
 
     // Getter and Setter for questions
-    public void setQuestion(String s);
-    public String getQuestion();
+    void setQuestion(String s);
+    String getQuestion();
 
     // Getter and Setter for answers
-    public void setCorrectAns(String ans);
-
-    public String getCorrectAns();
+    void setCorrectAns(String ans);
+    String getCorrectAns();
 
     // Answer Checker
-    abstract boolean isCorrect(String ans);
+    boolean isCorrect(String ans);
 
 }

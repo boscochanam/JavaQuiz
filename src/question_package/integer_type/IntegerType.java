@@ -12,7 +12,7 @@ public class IntegerType implements Question {
         super();
         String q = "Empty Question";
         setQuestion(q);
-        System.out.println(getQuestion());
+        //System.out.println(getQuestion());
         setCorrectAns(0);
     }
 
@@ -68,6 +68,12 @@ public class IntegerType implements Question {
         }
     }
 
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        IntegerType integerType = new IntegerType();
+        integerType.setQuestion("What is the answer to life, the universe and everything?");
+        integerType.setCorrectAns(42);
+        System.out.println(integerType.getQuestion());
+        System.out.println(integerType.getCorrectAns());
+    }
 
 }

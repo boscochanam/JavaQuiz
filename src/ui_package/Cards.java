@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 
 import static ui_package.SubmitListener.*;
 
-public class Cards extends JFrame implements ActionListener {
+public class Cards extends JFrame{
     private JPanel panel1;
     private JPanel descPanel;
     private JTextField answerField;
@@ -355,9 +355,5 @@ public class Cards extends JFrame implements ActionListener {
         return dRadioButton;
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
 }
 

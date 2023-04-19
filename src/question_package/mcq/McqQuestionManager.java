@@ -53,16 +53,7 @@ public class McqQuestionManager {
         return questions.get(index);
     }
 
-    public String getAnswer(int index) {
-        return questions.get(index).getCorrectAns();
-
-    }
-
     public int getNumQuestions() {
-        return questions.size();
-    }
-
-    public int getQuestionCount() {
         return questions.size();
     }
 
@@ -78,15 +69,11 @@ public class McqQuestionManager {
     }
 
     public static void main(String[] args) {
-
         McqQuestionManager mcq = new McqQuestionManager();
         for (int i = 0; i < mcq.getNumberOfQuestions(); i++) {
             System.out.println(mcq.getQuestion(i).getQuestion());
-            System.out.println(mcq.getQuestion(i).getOption1());
-            System.out.println(mcq.getQuestion(i).getOption2());
-            System.out.println(mcq.getQuestion(i).getOption3());
-            System.out.println(mcq.getQuestion(i).getOption4());
-            System.out.println(mcq.getQuestion(i).getCorrectAns());
+            mcq.getQuestion(i).printOptions();
+            System.out.println("Correct answer: " + mcq.getQuestion(i).getCorrectAns());
             System.out.println();
         }
     }

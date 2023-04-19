@@ -58,15 +58,7 @@ public class DescQuestionManager {
         return questionArray.get(index);
     }
 
-    public String getAnswer(int index) {
-        return questionArray.get(index).getCorrectAns();
-    }
-
     public int getNumQuestions() {
-        return questionArray.size();
-    }
-
-    public int getQuestionCount() {
         return questionArray.size();
     }
 
@@ -79,5 +71,14 @@ public class DescQuestionManager {
         } else {
             System.out.println("Incorrect answer!");
         }
+    }
+
+    public static void main(String[] args) {
+        DescQuestionManager manager = new DescQuestionManager();
+        System.out.println("Number of questions: " + manager.getNumberOfQuestions());
+        DescType question = manager.getQuestion(0);
+        System.out.println("Question: " + question.getQuestion());
+        System.out.println("Correct answer: " + question.getCorrectAns());
+        manager.checkAnswer(0, "hello");
     }
 }

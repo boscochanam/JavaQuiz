@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class McqType implements Question {
 
-    private String userAns;
     private String questionDesc;
     private ArrayList<String> options;
     private String correctAns;
@@ -29,10 +28,6 @@ public class McqType implements Question {
     public McqType(String que, String ans) {
         setCorrectAns(ans);
         setQuestion(que);
-    }
-
-    public String getAnswer() {
-        return getCorrectAns();
     }
 
     public void printOptions() {
@@ -79,7 +74,6 @@ public class McqType implements Question {
         return ans.equals(getCorrectAns());
     }
 
-
     McqType(String que, String a1, String a2, String a3, String a4, String correctAns) {
         options = new ArrayList<>();
         this.setQuestion(que);
@@ -97,28 +91,7 @@ public class McqType implements Question {
         m1.setCorrectAns("New Delhi"); // Call setCorrectAns method to set the correct answer
         System.out.println(m1.getQuestion());
         System.out.println(m1.getCorrectIndex());
-        //System.out.println(m1.getCorrectIndex());
 
-    }
-
-    public String getChoiceA() {
-        return options.get(0);
-    }
-
-    public String getChoiceB() {
-        return options.get(1);
-    }
-
-    public String getChoiceC() {
-        return options.get(2);
-    }
-
-    public String getChoiceD() {
-        return options.get(3);
-    }
-
-    public int getCorrectChoice() {
-        return correctIndex;
     }
 
     public int getCorrectAnswerIndex() {
@@ -148,22 +121,6 @@ public class McqType implements Question {
         answerOptions[2] = getAnswerC();
         answerOptions[3] = getAnswerD();
         return answerOptions;
-    }
-
-    public boolean getOption1() {
-        return options.get(0).equals(getCorrectAns());
-    }
-
-    public boolean getOption2() {
-        return options.get(1).equals(getCorrectAns());
-    }
-
-    public boolean getOption3() {
-        return options.get(2).equals(getCorrectAns());
-    }
-
-    public boolean getOption4() {
-        return options.get(3).equals(getCorrectAns());
     }
 
 }

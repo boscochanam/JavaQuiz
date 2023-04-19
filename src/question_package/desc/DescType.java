@@ -4,7 +4,6 @@ import question_package.Question;
 
 public class DescType implements Question {
 
-    private String userAns;
     private String questionDesc;
     private String correctAns;
 
