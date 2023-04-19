@@ -53,6 +53,8 @@ public class Cards extends JFrame{
 
 
     public Cards() {
+
+        // Initialising the Progress Bars to 0
         progressBar1.setMinimum(0);
         progressBar1.setMaximum(new DescQuestionManager().getNumberOfQuestions());
         progressBar1.setValue(1);
@@ -65,13 +67,14 @@ public class Cards extends JFrame{
         intProgress.setMaximum(new IntQuestionManager().getNumQuestions());
         intProgress.setValue(1);
 
+        // Setting Up the Cards and Panels
         panel1.setLayout(new CardLayout());
 
-        panel1.add(startPanel, "card1");
-        panel1.add(descPanel, "card2");
-        panel1.add(mcqPanel, "card3");
-        panel1.add(intPanel, "card4");
-        panel1.add(endPanel,"card5");
+        panel1.add(startPanel, "start");
+        panel1.add(descPanel, "desc");
+        panel1.add(mcqPanel, "mcq");
+        panel1.add(intPanel, "int");
+        panel1.add(endPanel,"end");
 
         ButtonGroup mcqButtonGroup = new ButtonGroup();
         mcqButtonGroup.add(aRadioButton);
@@ -80,33 +83,30 @@ public class Cards extends JFrame{
         mcqButtonGroup.add(dRadioButton);
 
         CardLayout cardLayout = (CardLayout) panel1.getLayout();
-        cardLayout.show(panel1, "card1");
-
+        cardLayout.show(panel1, "start");
 
         this.add(panel1);
         setSize(1200, 600);
 
-        aRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Handle A button click
-                int choice = getChoice();
-            }
+
+        // Adding Action Listeners to the Buttons
+
+        // MCQ Buttons
+        aRadioButton.addActionListener(e -> {
+            // Handle A button click
+            choice = getChoice();
         });
 
-        bRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Handle B button click
-                int choice = getChoice();
-            }
+        bRadioButton.addActionListener(e -> {
+            // Handle B button click
+            choice = getChoice();
         });
 
         cRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Handle C button click
-                int choice = getChoice();
+                choice = getChoice();
             }
         });
 
@@ -114,7 +114,7 @@ public class Cards extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Handle D button click
-                int choice = getChoice();
+                choice = getChoice();
             }
         });
 
@@ -125,7 +125,7 @@ public class Cards extends JFrame{
                 if (name.length() > 0) {
                     CardLayout cardLayout = (CardLayout) panel1.getLayout();
                     JOptionPane.showMessageDialog(panel1, "Welcome " + name + "!");
-                    cardLayout.show(panel1, "card2");
+                    cardLayout.show(panel1, "desc");
                 } else {
                     JOptionPane.showMessageDialog(panel1, "Please enter your name");
                 }
@@ -227,7 +227,7 @@ public class Cards extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 CardLayout cardLayout = (CardLayout) panel1.getLayout();
-                cardLayout.show(panel1, "card1");
+                cardLayout.show(panel1, "start");
                 SubmitListener.setScore(0);
                 mcqProgress.setValue(0);
                 intProgress.setValue(0);
