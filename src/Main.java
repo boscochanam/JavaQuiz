@@ -18,10 +18,10 @@ public class Main {
         McqQuestionManager mcq_questions = new McqQuestionManager();
 
         // Making a new array to hold the current question number
-        final int[] currentQuestionNumber = {0};
+        int currentQuestionNumber = 0;
 
         // Setting the first question
-        cards.setQuestion(desc_questions.getQuestion(currentQuestionNumber[0]).getQuestion(),currentQuestionNumber[0]);
+        cards.setQuestion(desc_questions.getQuestion(currentQuestionNumber).getQuestion(),currentQuestionNumber);
 
         // Adding a listener to the submit button
         JButton submit = cards.getSubmit();

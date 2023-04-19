@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added a Loop, so we can indefinitely run the quiz&#10; Added exception for Integer Type Questions">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-04-2023_21_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12-04-2023_21_24__Changes_.xml" beforeDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Removed unorganised stuff and made code cleaner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/integer_type/IntQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/integer_type/IntegerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntegerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +63,7 @@
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IntegerType">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Cards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui_package.Cards" />
       <module name="JavaQuiz" />
@@ -132,10 +125,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.IntegerType" />
         <item itemvalue="Application.McqType" />
         <item itemvalue="Application.McqQuestionManager" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Cards" />
       </list>
     </recent_temporary>
@@ -303,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681826354989</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Removed unorganised stuff and made code cleaner">
+      <created>1681924935441</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681924935441</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,7 +350,8 @@
     <MESSAGE value="UI Improvements" />
     <MESSAGE value="Added Exception Handling for Integer Type Questions" />
     <MESSAGE value="Added a Loop, so we can indefinitely run the quiz&#10; Added exception for Integer Type Questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a Loop, so we can indefinitely run the quiz&#10; Added exception for Integer Type Questions" />
+    <MESSAGE value="Removed unorganised stuff and made code cleaner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unorganised stuff and made code cleaner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

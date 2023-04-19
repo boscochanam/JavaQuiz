@@ -140,7 +140,7 @@ public class Cards extends JFrame{
                 McqQuestionManager mcq_questions = new McqQuestionManager();
 
                 // Get current question
-                McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber[0]);
+                McqType currentQuestion = mcq_questions.getQuestion(currentQuestionNumber);
 
                 // Compare selected choice with correct answer
                 int score = getScore();
@@ -150,16 +150,16 @@ public class Cards extends JFrame{
                 mcqScore.setText("Score: " + getScore());
 
                 // Update progress bar
-                mcqProgress.setValue(currentQuestionNumber[0] + 2);
+                mcqProgress.setValue(currentQuestionNumber + 2);
 
                 // Move to next question if available
-                if (currentQuestionNumber[0] < McqQuestionManager.getNumberOfQuestions()-1){
-                    currentQuestionNumber[0]++;
-                    setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber[0]).getQuestion(), currentQuestionNumber[0]);
-                    getAButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[0]);
-                    getBButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[1]);
-                    getCButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[2]);
-                    getDButton().setText(mcq_questions.getQuestion(currentQuestionNumber[0]).getAnswerOptions()[3]);
+                if (currentQuestionNumber < McqQuestionManager.getNumberOfQuestions()-1){
+                    currentQuestionNumber++;
+                    setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber).getQuestion(), currentQuestionNumber);
+                    getAButton().setText(mcq_questions.getQuestion(currentQuestionNumber).getAnswerOptions()[0]);
+                    getBButton().setText(mcq_questions.getQuestion(currentQuestionNumber).getAnswerOptions()[1]);
+                    getCButton().setText(mcq_questions.getQuestion(currentQuestionNumber).getAnswerOptions()[2]);
+                    getDButton().setText(mcq_questions.getQuestion(currentQuestionNumber).getAnswerOptions()[3]);
                     clearSelection();
                     getChoice();
 
@@ -170,7 +170,7 @@ public class Cards extends JFrame{
                     nextCard();
                     intQuestion.setText(new IntQuestionManager().getQuestion(0).getQuestion());
                     intScore.setText("Score: " + getScore());
-                    currentQuestionNumber[0] = 0;
+                    currentQuestionNumber = 0;
 
 
                     finalscore.setText(String.valueOf(getScore()));
@@ -191,7 +191,7 @@ public class Cards extends JFrame{
                     IntQuestionManager int_questions = new IntQuestionManager();
 
                     // Get current question
-                    IntegerType currentQuestion = int_questions.getQuestion(currentQuestionNumber[0]);
+                    IntegerType currentQuestion = int_questions.getQuestion(currentQuestionNumber);
 
                     // Compare selected choice with correct answer
                     int score = getScore();
@@ -201,13 +201,13 @@ public class Cards extends JFrame{
                     intScore.setText("Score: " + getScore());
 
                     // Update progress bar
-                    intProgress.setValue(currentQuestionNumber[0] + 2);
+                    intProgress.setValue(currentQuestionNumber + 2);
 
                     // Move to next question if available
-                    if (currentQuestionNumber[0] < IntQuestionManager.getNumberOfQuestions()-1){
-                        currentQuestionNumber[0]++;
-                        System.out.println("New Question: " + currentQuestionNumber[0] );
-                        intQuestion.setText(int_questions.getQuestion(currentQuestionNumber[0]).getQuestion());
+                    if (currentQuestionNumber < IntQuestionManager.getNumberOfQuestions()-1){
+                        currentQuestionNumber++;
+                        System.out.println("New Question: " + currentQuestionNumber );
+                        intQuestion.setText(int_questions.getQuestion(currentQuestionNumber).getQuestion());
                         intAnswerField.setText("");
                     } else {
                         nextCard();
@@ -236,10 +236,10 @@ public class Cards extends JFrame{
                 clearSelection();
                 intSubmit.setEnabled(true);
                 intAnswerField.setEnabled(true);
-                currentQuestionNumber[0] = 0;
+                currentQuestionNumber = 0;
 
                 DescQuestionManager desc_questions = new DescQuestionManager();
-                setQuestion(desc_questions.getQuestion(currentQuestionNumber[0]).getQuestion(),currentQuestionNumber[0]);
+                setQuestion(desc_questions.getQuestion(currentQuestionNumber).getQuestion(),currentQuestionNumber);
                 scoreLabel.setText("Score: 0");
                 answerField.setText("");
                 intAnswerField.setText("");
