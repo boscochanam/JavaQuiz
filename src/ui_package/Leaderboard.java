@@ -9,6 +9,12 @@ public class Leaderboard {
         String name;
         int score;
 
+        public ScoreEntry()
+        {
+            this.name = "Empty";
+            this.score = 0;
+        }
+
         public ScoreEntry(String name, int score) {
             this.name = name;
             this.score = score;

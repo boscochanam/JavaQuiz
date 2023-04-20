@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added Exception Handling for Integer Type Questions">
-      <change afterPath="$PROJECT_DIR$/src/ui_package/Leaderboard.java" afterDir="false" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Leaderboard now interacts with MySQL database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/Leaderboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Leaderboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui_package/LeaderboardUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/LeaderboardUpdater.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,12 +65,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Cards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui_package.Cards" />
+    <configuration name="IntegerType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="question_package.integer_type.IntegerType" />
       <module name="JavaQuiz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui_package.*" />
+          <option name="PATTERN" value="question_package.integer_type.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegerType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="question_package.integer_type.IntegerType" />
+    <configuration name="LeaderboardUpdater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui_package.LeaderboardUpdater" />
       <module name="JavaQuiz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="question_package.integer_type.*" />
+          <option name="PATTERN" value="ui_package.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,10 +127,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LeaderboardUpdater" />
         <item itemvalue="Application.IntegerType" />
         <item itemvalue="Application.McqType" />
         <item itemvalue="Application.McqQuestionManager" />
-        <item itemvalue="Application.Cards" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681925607397</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Leaderboard now interacts with MySQL database">
+      <created>1681971551538</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681971551538</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,7 +367,8 @@
     <MESSAGE value="Added a Loop, so we can indefinitely run the quiz&#10; Added exception for Integer Type Questions" />
     <MESSAGE value="Removed unorganised stuff and made code cleaner" />
     <MESSAGE value="Changed questionnumber array to int" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed questionnumber array to int" />
+    <MESSAGE value="Leaderboard now interacts with MySQL database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Leaderboard now interacts with MySQL database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
