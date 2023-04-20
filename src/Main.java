@@ -1,5 +1,6 @@
 import javax.swing.JButton;
 import question_package.desc.DescQuestionManager;
+import question_package.integer_type.IntQuestionManager;
 import question_package.mcq.McqQuestionManager;
 import ui_package.*;
 
@@ -16,6 +17,7 @@ public class Main {
         // Making objects for the different question types
         DescQuestionManager desc_questions = new DescQuestionManager();
         McqQuestionManager mcq_questions = new McqQuestionManager();
+        IntQuestionManager int_questions = new IntQuestionManager();
 
         // Making a new array to hold the current question number
         int currentQuestionNumber = 0;
@@ -25,7 +27,7 @@ public class Main {
 
         // Adding a listener to the submit button
         JButton submit = cards.getSubmit();
-        SubmitListener submitListener = new SubmitListener(desc_questions, mcq_questions,cards, currentQuestionNumber);
+        SubmitListener submitListener = new SubmitListener(desc_questions, mcq_questions,cards, currentQuestionNumber, int_questions);
         submit.addActionListener(submitListener);
 
     }

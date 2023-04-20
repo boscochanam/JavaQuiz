@@ -103,7 +103,6 @@ public class Cards extends JFrame{
         mcqButtonGroup.add(dRadioButton);
 
         CardLayout cardLayout = (CardLayout) quizPanel.getLayout();
-        //cardLayout.show(quizPanel, "preQuiz");
         cardLayout.show(quizPanel, "start");
 
         this.add(quizPanel);
@@ -294,6 +293,7 @@ public class Cards extends JFrame{
                 intProgress.setMaximum(new IntQuestionManager().getNumQuestions());
                 intProgress.setValue(1);
 
+                Leaderboard.ScoreEntry[] topScores = Leaderboard.getTopScores();
                 leaderboard1.setText("1. " + topScores[0].name);
                 leaderboard1Score.setText(" " + topScores[0].score);
                 leaderboard2.setText("2. " + topScores[1].name);

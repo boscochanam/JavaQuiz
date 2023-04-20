@@ -22,7 +22,7 @@ public class Leaderboard {
     }
 
     // JDBC driver name and database URL
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     static final String db_url = "jdbc:mysql://localhost:3306/javaquiz";
 
     // Database credentials

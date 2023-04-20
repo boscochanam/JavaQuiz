@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 import question_package.desc.DescQuestionManager;
+import question_package.integer_type.IntQuestionManager;
 import question_package.mcq.McqQuestionManager;
 import question_package.mcq.McqType;
 
@@ -18,7 +19,7 @@ public class SubmitListener implements ActionListener {
     private JProgressBar progressBar1;
     boolean correctAnswer;
 
-    public SubmitListener(DescQuestionManager descQuestionManager, McqQuestionManager mcqQuestionManager, Cards cards, int currentQuestionNumber) {
+    public SubmitListener(DescQuestionManager descQuestionManager, McqQuestionManager mcqQuestionManager, Cards cards, int currentQuestionNumber, IntQuestionManager intQuestionManager) {
         this.descQuestionManager = descQuestionManager;
         this.mcqQuestionManager = mcqQuestionManager;
         this.cards = cards;
@@ -54,7 +55,6 @@ public class SubmitListener implements ActionListener {
                 correctAnswer = false;
             }
 
-            System.out.println("Current Bar:" + currentQuestionNumber+1);
             progressBar1.setValue(currentQuestionNumber+2);
 
             // Incrementing Score if Correct Answer
