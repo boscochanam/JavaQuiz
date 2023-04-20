@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added modification option to database directly from compiler" />
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added modification option to database directly from compiler">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +68,20 @@
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Int_Updt">
+  <component name="RunManager" selected="Application.DatabaseMenu">
+    <configuration name="DatabaseMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="questions.DatabaseMenu" />
+      <module name="JavaQuiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="questions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Desc_Updt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="questions.Desc_Updt" />
       <module name="JavaQuiz" />
@@ -113,26 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="McqType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="question_package.mcq.McqType" />
-      <module name="JavaQuiz" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="question_package.mcq.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DatabaseMenu" />
         <item itemvalue="Application.Int_Updt" />
         <item itemvalue="Application.Desc_Updt" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.IntegerType" />
-        <item itemvalue="Application.McqType" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681976594146</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added modification option to database directly from compiler">
+      <created>1681976657416</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681976657416</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
