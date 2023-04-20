@@ -1,6 +1,7 @@
 package ui_package;
 
 import question_package.desc.DescQuestionManager;
+import question_package.desc.DescType;
 import question_package.integer_type.IntQuestionManager;
 import question_package.integer_type.IntegerType;
 import question_package.mcq.McqQuestionManager;
@@ -57,6 +58,7 @@ public class Cards extends JFrame{
     private JPasswordField passwordField;
     private JButton manageDatabaseButton;
     private JPasswordField passwordField1;
+    private JLabel totalScore;
     private static int choice = -1;
 
 
@@ -107,6 +109,10 @@ public class Cards extends JFrame{
         this.add(quizPanel);
         setSize(1200, 600);
 
+        int total_questions = new DescQuestionManager().getNumberOfQuestions() + new McqQuestionManager().getNumQuestions() + new IntQuestionManager().getNumQuestions();
+
+        totalScore.setText(String.valueOf(total_questions));
+
 
         // Adding Action Listeners to the Buttons
 
@@ -126,6 +132,7 @@ public class Cards extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 Cards.this.dispose();
                 DatabaseMenu.main(null);
+
             }
         });
 
@@ -286,6 +293,13 @@ public class Cards extends JFrame{
                 intProgress.setMinimum(0);
                 intProgress.setMaximum(new IntQuestionManager().getNumQuestions());
                 intProgress.setValue(1);
+
+                leaderboard1.setText("1. " + topScores[0].name);
+                leaderboard1Score.setText(" " + topScores[0].score);
+                leaderboard2.setText("2. " + topScores[1].name);
+                leaderboard2Score.setText(" " + topScores[1].score);
+                leaderboard3.setText("3. " + topScores[2].name);
+                leaderboard3Score.setText(" " + topScores[2].score);
             }
         });
     }
