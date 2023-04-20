@@ -1,20 +1,18 @@
 package question_package;
 
-public interface Question {
-
+public abstract class Question {
     // Member variables
-    String questionDesc = null;
-    String correctAns = null;
+    protected String questionDesc;
+    protected String correctAns;
 
-    // Getter and Setter for questions
-    void setQuestion(String s);
-    String getQuestion();
+    public Question()
+    {
+        String q = "Empty Question";
+        setQuestion(q);
+    }
 
-    // Getter and Setter for answers
-    void setCorrectAns(String ans);
-    String getCorrectAns();
-
-    // Answer Checker
-    boolean isCorrect(String ans);
-
+    public abstract void setQuestion(String s);
+    public abstract String getQuestion();
+    public abstract void setCorrectAns(String ans);
+    public abstract String getCorrectAns();
 }

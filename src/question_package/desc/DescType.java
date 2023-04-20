@@ -2,16 +2,13 @@ package question_package.desc;
 
 import question_package.Question;
 
-public class DescType implements Question {
+public class DescType extends Question {
 
     private String questionDesc;
     private String correctAns;
 
     DescType() {
         super();
-        String q = "Empty Question";
-        setQuestion(q);
-        System.out.println(getQuestion());
         setCorrectAns("hello");
     }
 
@@ -24,13 +21,6 @@ public class DescType implements Question {
         return getCorrectAns();
     }
 
-
-    public boolean isCorrect(String userOption) {
-        if (userOption.equals(getCorrectAns()))
-            return true;
-        else
-            return false;
-    }
 
     public void setQuestion(String q){
         questionDesc = q;

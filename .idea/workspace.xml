@@ -4,8 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Added modification option to database directly from compiler">
+    <list default="true" id="44b69682-0a3e-47f5-b3d0-481d80332bc5" name="Changes" comment="Final clean code commit">
+      <change afterPath="$PROJECT_DIR$/src/question_package/QuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13-04-2023_23_58__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-04-2023_08_01_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16-04-2023_08_01_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-04-2023_22_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-04-2023_22_54__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-04-2023_23_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19-04-2023_23_03__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescQuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/desc/DescType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/desc/DescType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/integer_type/IntQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntQuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/integer_type/IntegerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/integer_type/IntegerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqQuestionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/mcq/McqType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/Desc_Updt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/sql_question_link/Desc_Updt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/Int_Updt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/sql_question_link/Int_Updt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/MCQ_Updt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/question_package/sql_question_link/MCQ_Updt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/LeaderboardUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/LeaderboardUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui_package/SubmitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +35,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
-    </option>
-  </component>
-  <component name="Git.Pull.Settings">
-    <option name="OPTIONS">
-      <set>
-        <option value="REBASE" />
-      </set>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="JDBC" />
+        <entry key="$PROJECT_DIR$" value="module+for_stuff" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,11 +62,11 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;150&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;231&quot;,
     &quot;git-widget-placeholder&quot;: &quot;pogUI&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -68,39 +82,13 @@
       <recent name="C:\Anirudh\SIT PUNE\JAVA\JavaQuiz\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DatabaseMenu">
-    <configuration name="DatabaseMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="questions.DatabaseMenu" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Cards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui_package.Cards" />
       <module name="JavaQuiz" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="questions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Desc_Updt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="questions.Desc_Updt" />
-      <module name="JavaQuiz" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="questions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Int_Updt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="questions.Int_Updt" />
-      <module name="JavaQuiz" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="questions.*" />
+          <option name="PATTERN" value="ui_package.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,13 +116,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="McqQuestionManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="question_package.mcq.McqQuestionManager" />
+      <module name="JavaQuiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question_package.mcq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="McqType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="question_package.mcq.McqType" />
+      <module name="JavaQuiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="question_package.mcq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DatabaseMenu" />
-        <item itemvalue="Application.Int_Updt" />
-        <item itemvalue="Application.Desc_Updt" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.IntegerType" />
+        <item itemvalue="Application.McqType" />
+        <item itemvalue="Application.McqQuestionManager" />
+        <item itemvalue="Application.Cards" />
       </list>
     </recent_temporary>
   </component>
@@ -308,35 +322,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681924935441</updated>
     </task>
-    <task id="LOCAL-00024" summary="Added modification option to database directly from compiler">
-      <created>1681932955009</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1681932955009</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Added modification option to database directly from compiler">
-      <created>1681933007295</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1681933007295</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Added modification option to database directly from compiler">
-      <created>1681976594146</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1681976594146</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Added modification option to database directly from compiler">
-      <created>1681976657416</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1681976657416</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,8 +370,7 @@
     <MESSAGE value="Added Exception Handling for Integer Type Questions" />
     <MESSAGE value="Added a Loop, so we can indefinitely run the quiz&#10; Added exception for Integer Type Questions" />
     <MESSAGE value="Removed unorganised stuff and made code cleaner" />
-    <MESSAGE value="Added modification option to database directly from compiler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added modification option to database directly from compiler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unorganised stuff and made code cleaner" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

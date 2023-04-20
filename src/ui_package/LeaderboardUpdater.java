@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import static ui_package.SubmitListener.score;
+
 public class LeaderboardUpdater {
 
     public void updateLeaderboard(String name, int score) throws SQLException {
@@ -26,9 +28,8 @@ public class LeaderboardUpdater {
 
     public static void main(String [] args)
     {
-
         LeaderboardUpdater l1 = new LeaderboardUpdater();
-        l1.updateLeaderboard(name, score);
+        //l1.updateLeaderboard(name, score);
     }
 
 }

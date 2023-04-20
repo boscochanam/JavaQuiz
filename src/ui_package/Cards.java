@@ -7,7 +7,6 @@ import question_package.mcq.McqQuestionManager;
 import question_package.mcq.McqType;
 
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicRadioButtonMenuItemUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +14,7 @@ import java.awt.event.ActionListener;
 import static ui_package.SubmitListener.*;
 
 public class Cards extends JFrame{
-    private JPanel panel1;
+    private JPanel quizPanel;
     private JPanel descPanel;
     private JTextField answerField;
     private JProgressBar progressBar1;
@@ -52,19 +51,23 @@ public class Cards extends JFrame{
     private JLabel leaderboard1Score;
     private JLabel leaderboard2Score;
     private JLabel leaderboard3Score;
+    private JPanel preQuiz;
+    private JPasswordField passwordField;
+    private JButton manageDatabaseButton;
+    private JPasswordField passwordField1;
     private static int choice = -1;
 
 
     public Cards() {
         // retrieve top scores
-        Leaderboard.ScoreEntry[] topScores = Leaderboard.getTopScores();
-
-        leaderboard1.setText("1. " + topScores[0].name);
-        leaderboard1Score.setText(" " + topScores[0].score);
-        leaderboard2.setText("2. " + topScores[1].name);
-        leaderboard2Score.setText(" " + topScores[1].score);
-        leaderboard3.setText("3. " + topScores[2].name);
-        leaderboard3Score.setText(" " + topScores[2].score);
+//        Leaderboard.ScoreEntry[] topScores = Leaderboard.getTopScores();
+//
+//        leaderboard1.setText("1. " + topScores[0].name);
+//        leaderboard1Score.setText(" " + topScores[0].score);
+//        leaderboard2.setText("2. " + topScores[1].name);
+//        leaderboard2Score.setText(" " + topScores[1].score);
+//        leaderboard3.setText("3. " + topScores[2].name);
+//        leaderboard3Score.setText(" " + topScores[2].score);
 
         // Initialising the Progress Bars to 0
         progressBar1.setMinimum(0);
@@ -80,13 +83,14 @@ public class Cards extends JFrame{
         intProgress.setValue(1);
 
         // Setting Up the Cards and Panels
-        panel1.setLayout(new CardLayout());
+        quizPanel.setLayout(new CardLayout());
 
-        panel1.add(startPanel, "start");
-        panel1.add(descPanel, "desc");
-        panel1.add(mcqPanel, "mcq");
-        panel1.add(intPanel, "int");
-        panel1.add(endPanel,"end");
+        //quizPanel.add(preQuiz, "preQuiz");
+        quizPanel.add(startPanel, "start");
+        quizPanel.add(descPanel, "desc");
+        quizPanel.add(mcqPanel, "mcq");
+        quizPanel.add(intPanel, "int");
+        quizPanel.add(endPanel,"end");
 
         ButtonGroup mcqButtonGroup = new ButtonGroup();
         mcqButtonGroup.add(aRadioButton);
@@ -94,10 +98,11 @@ public class Cards extends JFrame{
         mcqButtonGroup.add(cRadioButton);
         mcqButtonGroup.add(dRadioButton);
 
-        CardLayout cardLayout = (CardLayout) panel1.getLayout();
-        cardLayout.show(panel1, "start");
+        CardLayout cardLayout = (CardLayout) quizPanel.getLayout();
+        //cardLayout.show(quizPanel, "preQuiz");
+        cardLayout.show(quizPanel, "start");
 
-        this.add(panel1);
+        this.add(quizPanel);
         setSize(1200, 600);
 
 
@@ -135,11 +140,11 @@ public class Cards extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String name = NameSubmission.getText();
                 if (name.length() > 0) {
-                    CardLayout cardLayout = (CardLayout) panel1.getLayout();
-                    JOptionPane.showMessageDialog(panel1, "Welcome " + name + "!");
-                    cardLayout.show(panel1, "desc");
+                    CardLayout cardLayout = (CardLayout) quizPanel.getLayout();
+                    JOptionPane.showMessageDialog(quizPanel, "Welcome " + name + "!");
+                    cardLayout.show(quizPanel, "desc");
                 } else {
-                    JOptionPane.showMessageDialog(panel1, "Please enter your name");
+                    JOptionPane.showMessageDialog(quizPanel, "Please enter your name");
                 }
             }
         });
@@ -165,7 +170,7 @@ public class Cards extends JFrame{
                 mcqProgress.setValue(currentQuestionNumber + 2);
 
                 // Move to next question if available
-                if (currentQuestionNumber < McqQuestionManager.getNumberOfQuestions()-1){
+                if (currentQuestionNumber < mcq_questions.getNumberOfQuestions()-1){
                     currentQuestionNumber++;
                     setQuestionMcq(mcq_questions.getQuestion(currentQuestionNumber).getQuestion(), currentQuestionNumber);
                     getAButton().setText(mcq_questions.getQuestion(currentQuestionNumber).getAnswerOptions()[0]);
@@ -216,7 +221,7 @@ public class Cards extends JFrame{
                     intProgress.setValue(currentQuestionNumber + 2);
 
                     // Move to next question if available
-                    if (currentQuestionNumber < IntQuestionManager.getNumberOfQuestions()-1){
+                    if (currentQuestionNumber < int_questions.getNumberOfQuestions()-1){
                         currentQuestionNumber++;
                         System.out.println("New Question: " + currentQuestionNumber );
                         intQuestion.setText(int_questions.getQuestion(currentQuestionNumber).getQuestion());
@@ -238,8 +243,8 @@ public class Cards extends JFrame{
         startAgainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CardLayout cardLayout = (CardLayout) panel1.getLayout();
-                cardLayout.show(panel1, "start");
+                CardLayout cardLayout = (CardLayout) quizPanel.getLayout();
+                cardLayout.show(quizPanel, "start");
                 SubmitListener.setScore(0);
                 mcqProgress.setValue(0);
                 intProgress.setValue(0);
@@ -320,8 +325,8 @@ public class Cards extends JFrame{
     }
 
     public void nextCard() {
-        CardLayout cardLayout = (CardLayout) panel1.getLayout();
-        cardLayout.next(panel1);
+        CardLayout cardLayout = (CardLayout) quizPanel.getLayout();
+        cardLayout.next(quizPanel);
     }
     public void setQuestion(String question, int qno) {
         this.question.setText("Question " + (qno + 1) + ": " + question);

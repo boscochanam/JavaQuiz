@@ -1,4 +1,4 @@
-package questions;
+package question_package.sql_question_link;
 
 import java.sql.*;
 import java.util.Scanner;

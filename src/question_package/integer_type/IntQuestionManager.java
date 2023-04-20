@@ -1,5 +1,7 @@
 package question_package.integer_type;
 
+import question_package.QuestionManager;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Connection;
@@ -8,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class IntQuestionManager {
+public class IntQuestionManager implements QuestionManager {
     private static List<IntegerType> questionArray;
 
     public IntQuestionManager() {
@@ -51,7 +53,7 @@ public class IntQuestionManager {
         }
     }
 
-    public static int getNumberOfQuestions() {
+    public int getNumberOfQuestions() {
         return questionArray.size();
     }
 
@@ -61,6 +63,10 @@ public class IntQuestionManager {
 
     public int getNumQuestions() {
         return questionArray.size();
+    }
+
+    @Override
+    public void checkAnswer(int index, String selectedOption) {
     }
 
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package question_package.integer_type;
 
 import question_package.Question;
 
-public class IntegerType implements Question {
+public class IntegerType extends Question {
 
     private int userAns;
     private String questionDesc;
@@ -10,9 +10,6 @@ public class IntegerType implements Question {
 
     IntegerType() {
         super();
-        String q = "Empty Question";
-        setQuestion(q);
-        //System.out.println(getQuestion());
         setCorrectAns(0);
     }
 
@@ -53,19 +50,6 @@ public class IntegerType implements Question {
 
     public String getCorrectAns() {
         return Integer.toString(correctAns);
-    }
-
-    @Override
-    public boolean isCorrect(String ans) {
-        try {
-            int userOption = Integer.parseInt(ans);
-            return isCorrect(userOption);
-        } catch (NumberFormatException e) {
-            // Handle exception when ans is not a valid integer
-            System.out.println("Error: Invalid integer format for user answer.");
-            e.printStackTrace();
-            return false;
-        }
     }
 
     public static void main(String[] args) {

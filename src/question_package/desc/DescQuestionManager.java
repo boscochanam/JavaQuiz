@@ -1,5 +1,8 @@
 package question_package.desc;
 
+import question_package.Question;
+import question_package.QuestionManager;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Connection;
@@ -7,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-public class DescQuestionManager {
+public class DescQuestionManager implements QuestionManager {
     private List<DescType> questionArray;
 
     public DescQuestionManager() {

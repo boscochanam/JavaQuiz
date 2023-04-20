@@ -14,7 +14,7 @@ public class SubmitListener implements ActionListener {
     private final McqQuestionManager mcqQuestionManager;
     public static int currentQuestionNumber = 0;
     private final Cards cards;
-    private static int score = 0;
+    static int score = 0;
     private JProgressBar progressBar1;
     boolean correctAnswer;
 

@@ -1,9 +1,9 @@
-package questions;
+package question_package.sql_question_link;
 
 import java.sql.*;
 import java.util.Scanner;
 
-public class Int_Updt {
+public class MCQ_Updt {
 
     private static final String url = "jdbc:mysql://localhost:3306/javaquiz";
     private static final String user = "root";
@@ -20,16 +20,24 @@ public class Int_Updt {
             stmt = conn.createStatement();
 
             // Display all questions before user interaction
-            String selectQuery = "SELECT * FROM int_type_questions";
+            String selectQuery = "SELECT * FROM mcq_questions";
             ResultSet rs = stmt.executeQuery(selectQuery);
 
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String question = rs.getString("question");
-                int correctAnswer = rs.getInt("correctAnswer");
+                String option1 = rs.getString("option1");
+                String option2 = rs.getString("option2");
+                String option3 = rs.getString("option3");
+                String option4 = rs.getString("option4");
+                String correctOption = rs.getString("correctOption");
 
                 System.out.println("Question " + id + ": " + question);
-                System.out.println("Answer: " + correctAnswer);
+                System.out.println("Option 1: " + option1);
+                System.out.println("Option 2: " + option2);
+                System.out.println("Option 3: " + option3);
+                System.out.println("Option 4: " + option4);
+                System.out.println("Correct Option: " + correctOption);
                 System.out.println("----------------------");
             }
 
@@ -49,9 +57,17 @@ public class Int_Updt {
                         // User interaction to add a new question
                         System.out.println("Enter the new question:");
                         String newQuestion = scanner.nextLine();
-                        System.out.println("Enter the answer:");
-                        int newAnswer = scanner.nextInt();
-                        String addQuery = "INSERT INTO int_type_questions (question, correctAnswer) VALUES ('" + newQuestion + "', " + newAnswer + ")";
+                        System.out.println("Enter option 1:");
+                        String option1 = scanner.nextLine();
+                        System.out.println("Enter option 2:");
+                        String option2 = scanner.nextLine();
+                        System.out.println("Enter option 3:");
+                        String option3 = scanner.nextLine();
+                        System.out.println("Enter option 4:");
+                        String option4 = scanner.nextLine();
+                        System.out.println("Enter the correct option number (1-4):");
+                        String correctOption = scanner.nextLine();
+                        String addQuery = "INSERT INTO mcq_questions (question, option1, option2, option3, option4, correctOption) VALUES ('" + newQuestion + "', '" + option1 + "', '" + option2 + "', '" + option3 + "', '" + option4 + "', '" + correctOption + "')";
                         stmt.executeUpdate(addQuery);
                         System.out.println("New question added successfully.");
                         break;
@@ -60,29 +76,29 @@ public class Int_Updt {
                         System.out.println("Enter the question id to update:");
                         int id = scanner.nextInt();
                         scanner.nextLine();
-                        System.out.println("Enter the updated answer:");
-                        int updatedAnswer = scanner.nextInt();
-                        String updateQuery = "UPDATE int_type_questions SET correctAnswer = " + updatedAnswer + " WHERE id = " + id;
+                        System.out.println("Enter the updated correct option number (1-4):");
+                        String updatedOption = scanner.nextLine();
+                        String updateQuery = "UPDATE mcq_questions SET correctOption = '" + updatedOption + "' WHERE id = " + id;
                         stmt.executeUpdate(updateQuery);
                         System.out.println("Question updated successfully.");
                         break;
                     case 3:
-                        // User interaction to delete a question
+                        // User interaction to
                         System.out.println("Enter the question id to delete:");
                         int deleteId = scanner.nextInt();
-                        String deleteQuery = "DELETE FROM int_type_questions WHERE id = " + deleteId;
+                        String deleteQuery = "DELETE FROM mcq_questions WHERE id = " + deleteId;
                         stmt.executeUpdate(deleteQuery);
                         System.out.println("Question deleted successfully.");
                         break;
                     case 4:
-                        // User interaction to view all questions
-                        rs = stmt.executeQuery("SELECT * FROM int_type_questions");
+// User interaction to view all questions
+                        rs = stmt.executeQuery("SELECT * FROM mcq_questions");
                         while (rs.next()) {
-                            System.out.println(rs.getInt("id") + "\t" + rs.getString("question") + "\t" + rs.getInt("correctAnswer"));
+                            System.out.println(rs.getInt("id") + "\t" + rs.getString("question") + "\t" + rs.getString("option1") + "\t" + rs.getString("option2") + "\t" + rs.getString("option3") + "\t" + rs.getString("option4") + "\t" + rs.getString("correctOption"));
                         }
                         break;
                     case 5:
-                        // Exit the program
+// Exit the program
                         System.out.println("Exiting program...");
                         System.exit(0);
                         break;

@@ -1,5 +1,7 @@
 package question_package.mcq;
 
+import question_package.QuestionManager;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class McqQuestionManager {
+public class McqQuestionManager implements QuestionManager {
 
     private static List<McqType> questions;
 
@@ -45,7 +47,7 @@ public class McqQuestionManager {
         }
     }
 
-    public static int getNumberOfQuestions() {
+    public int getNumberOfQuestions() {
         return questions.size();
     }
 

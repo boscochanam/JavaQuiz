@@ -4,7 +4,7 @@ import question_package.Question;
 
 import java.util.ArrayList;
 
-public class McqType implements Question {
+public class McqType extends Question {
 
     private String questionDesc;
     private ArrayList<String> options;
@@ -14,10 +14,7 @@ public class McqType implements Question {
     McqType() {
         super();
         options = new ArrayList<>(); // Initialize the options list
-        String q = "Empty Question";
-        setQuestion(q);
-        System.out.println(getQuestion());
-        setCorrectAns("hello");
+        setCorrectAns("Option 1");
 
         options.add("Option 1");
         options.add("Option 2");
@@ -67,11 +64,6 @@ public class McqType implements Question {
             System.out.println("Error: Correct answer index out of bounds");
             return null;
         }
-    }
-
-    @Override
-    public boolean isCorrect(String ans) {
-        return ans.equals(getCorrectAns());
     }
 
     McqType(String que, String a1, String a2, String a3, String a4, String correctAns) {
