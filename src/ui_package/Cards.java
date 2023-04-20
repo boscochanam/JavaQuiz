@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import static ui_package.SubmitListener.*;
 
@@ -229,12 +230,15 @@ public class Cards extends JFrame{
                     } else {
                         nextCard();
                         finalscore.setText(String.valueOf(getScore()));
+                        new LeaderboardUpdater().updateLeaderboard(getPlayerName(),getScore());
                         intSubmit.setEnabled(false);
                         intAnswerField.setEnabled(false);
                     }
                 } catch (NumberFormatException ex) {
                     // Show a dialog box to inform the user
                     JOptionPane.showMessageDialog(null, "Please enter an integer as the answer.", "Answer Format", JOptionPane.ERROR_MESSAGE);
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
                 }
             }
         });
@@ -319,9 +323,20 @@ public class Cards extends JFrame{
         return choice;
     }
 
+    public String getPlayerName()
+    {
+        String playerName = NameSubmission.getText();
+        return playerName;
+    }
+
+    public int getFinalScore()
+    {
+        int finalScore = Integer.parseInt(finalscore.getText());
+        return finalScore;
+    }
+
 
     public static void main(String[] args) {
-
     }
 
     public void nextCard() {
@@ -371,6 +386,8 @@ public class Cards extends JFrame{
     public JRadioButton getDButton() {
         return dRadioButton;
     }
+
+
 
 }
 
