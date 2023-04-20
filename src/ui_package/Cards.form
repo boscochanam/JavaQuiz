@@ -355,7 +355,7 @@
                   <text value="Leaderboard:"/>
                 </properties>
               </component>
-              <component id="5bdcb" class="javax.swing.JLabel">
+              <component id="5bdcb" class="javax.swing.JLabel" binding="leaderboard1Score">
                 <constraints>
                   <grid row="14" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -367,7 +367,7 @@
                   <text value="0"/>
                 </properties>
               </component>
-              <component id="7590b" class="javax.swing.JLabel">
+              <component id="7590b" class="javax.swing.JLabel" binding="leaderboard2Score">
                 <constraints>
                   <grid row="15" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
@@ -379,7 +379,7 @@
                   <text value="0"/>
                 </properties>
               </component>
-              <component id="b5b3a" class="javax.swing.JLabel">
+              <component id="b5b3a" class="javax.swing.JLabel" binding="leaderboard3Score">
                 <constraints>
                   <grid row="16" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>

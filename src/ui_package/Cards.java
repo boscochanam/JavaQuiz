@@ -49,10 +49,22 @@ public class Cards extends JFrame{
     private JLabel leaderboard1;
     private JLabel leaderboard2;
     private JLabel leaderboard3;
+    private JLabel leaderboard1Score;
+    private JLabel leaderboard2Score;
+    private JLabel leaderboard3Score;
     private static int choice = -1;
 
 
     public Cards() {
+        // retrieve top scores
+        Leaderboard.ScoreEntry[] topScores = Leaderboard.getTopScores();
+
+        leaderboard1.setText("1. " + topScores[0].name);
+        leaderboard1Score.setText(" " + topScores[0].score);
+        leaderboard2.setText("2. " + topScores[1].name);
+        leaderboard2Score.setText(" " + topScores[1].score);
+        leaderboard3.setText("3. " + topScores[2].name);
+        leaderboard3Score.setText(" " + topScores[2].score);
 
         // Initialising the Progress Bars to 0
         progressBar1.setMinimum(0);
