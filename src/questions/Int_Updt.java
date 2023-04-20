@@ -51,7 +51,7 @@ public class Int_Updt {
                         String newQuestion = scanner.nextLine();
                         System.out.println("Enter the answer:");
                         int newAnswer = scanner.nextInt();
-                        String addQuery = "INSERT INTO int_type_questions (question, answer) VALUES ('" + newQuestion + "', " + newAnswer + ")";
+                        String addQuery = "INSERT INTO int_type_questions (question, correctAnswer) VALUES ('" + newQuestion + "', " + newAnswer + ")";
                         stmt.executeUpdate(addQuery);
                         System.out.println("New question added successfully.");
                         break;
@@ -62,7 +62,7 @@ public class Int_Updt {
                         scanner.nextLine();
                         System.out.println("Enter the updated answer:");
                         int updatedAnswer = scanner.nextInt();
-                        String updateQuery = "UPDATE int_type_questions SET answer = " + updatedAnswer + " WHERE id = " + id;
+                        String updateQuery = "UPDATE int_type_questions SET correctAnswer = " + updatedAnswer + " WHERE id = " + id;
                         stmt.executeUpdate(updateQuery);
                         System.out.println("Question updated successfully.");
                         break;
