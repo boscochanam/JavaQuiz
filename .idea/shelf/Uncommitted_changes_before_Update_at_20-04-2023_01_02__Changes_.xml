@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Update_at_20-04-2023_01_02_[Changes]" date="1681932786753" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-04-2023_01_02_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 20-04-2023 01:02 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="mysql-connector-j-8.0.32/src/test/config/ssl-test-certs/client-keystore" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-04-2023_01_02_[Changes]/client-keystore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="javaquiz.db" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-04-2023_01_02_[Changes]/javaquiz.db" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="mysql-connector-j-8.0.32/src/test/config/ssl-test-certs/client-keystore-ext" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-04-2023_01_02_[Changes]/client-keystore-ext" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="mysql-connector-j-8.0.32/src/test/config/ssl-test-certs/ca-truststore" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-04-2023_01_02_[Changes]/ca-truststore" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="mysql-connector-j-8.0.32/src/test/config/ssl-test-certs/ca-truststore-ext" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20-04-2023_01_02_[Changes]/ca-truststore-ext" />
+  </binary>
+</changelist>
