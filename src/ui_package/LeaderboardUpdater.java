@@ -25,8 +25,8 @@ public class LeaderboardUpdater {
 
     public static void main(String [] args) throws SQLException {
         Cards c1 = new Cards();
-        String name = "John";
-        int score = 10;
+        String name = "None";
+        int score = 0;
 
         LeaderboardUpdater l1 = new LeaderboardUpdater();
         l1.updateLeaderboard(name, score);

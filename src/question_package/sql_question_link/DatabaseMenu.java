@@ -25,7 +25,7 @@ public class DatabaseMenu {
                     Desc_Updt.main(args);
                     break;
                 case 3:
-                    Int_Updt.main(args);
+                        Int_Updt.main(args);
                     break;
                 case 4:
                     System.out.println("Exiting program...");
